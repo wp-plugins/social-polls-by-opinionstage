@@ -4,7 +4,7 @@ Donate link:
 Tags: poll, polls, polling, vote, voting, debate, survey, social, opinionstage, opinion stage 
 
 Requires at least: 2.8
-Tested up to: 3.3.2
+Tested up to: 3.4.1
 Stable tag: trunk
  
 Add a social polling system to your blog. To add a social poll click on the social poll icon in the post/page text editor.
@@ -73,8 +73,8 @@ Yes, we plan to add the option to allow debating the poll. Users will be able to
 
 Follow these steps:
 
-1. Create a new poll / debate from <a href="http://www.opinionstage.com?ref=wp-v-poll" target="_blank">here</a>
-2. Copy the embed ID displayed on the poll 
+1. Create a new poll / debate from <a href="http://www.opinionstage.com/new_debate?ref=wp-v-poll" target="_blank">here</a>
+2. From the poll page, copy the embed ID located near the embed button 
 3. Click on the poll icon in the WordPress text editor to open the embed dialog
 4. Paste the ID you copied in the embed dialog
 
