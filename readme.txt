@@ -100,5 +100,7 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 1.0.1 (26 Aug 2012) = 
+  * Improvements in the embed flow to ease insertion of polls
  = Version 1.0.0 (15 Aug 2012) = 
-  * First social poll version
+  * First social poll version  
