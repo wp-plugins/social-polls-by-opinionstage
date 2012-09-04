@@ -1,0 +1,106 @@
+﻿=== Social Polls by OpinionStage ===
+Contributors: OpinionStage.com
+Donate link: 
+Tags: poll, polls, polling, vote, voting, debate, survey, social, opinionstage, opinion stage 
+
+Requires at least: 2.8
+Tested up to: 3.4.1
+Stable tag: trunk
+ 
+Add a social polling system to your blog. To add a social poll click on the social poll icon in the post/page text editor.
+
+== Description ==
+
+The Opinion Stage social poll plug-in allows you to easily integrate a social poll in any blog post/page.
+<BR>
+The social polls are designed to both improve user engagement and to drive additional traffic from social networks to the page in which the poll is embedded.
+<BR>
+The social poll plug-in is completely free and is easy to install and use.
+
+= Main Poll Features: =
+
+ * Survey site visitors using their social network identities
+ * View the full poll participant list
+ * Filter the poll participant list according to vote
+ * Follow users that participated in the poll
+ * Get notified about poll votes of users you follow (optionally)
+ * Filter the poll results by users you follow
+ * Discover what poll participants voted in other polls by visiting their profile
+ * Get the poll question & poll votes shared in social networks, driving additional traffic to the site
+ * ... And many more features to come!
+
+= About Opinion Stage: =
+
+Opinion Stage polls / debates bring together social network users with common interests and a desire to express, debate and follow opinions. For more details on Opinion Stage's polls & debates, visit <a href="http://www.opinionstage.com?ref=wp-v-poll" target="_blank">the Opinion Stage site.</a>
+
+== Installation ==
+
+1. Upload the social polls plug-in to your blog (or search for it) and install it on your plug-ins page
+2. Activate it
+
+== Frequently Asked Questions ==
+
+
+= What sets Opinion Stage polls apart from other polling solutions? =
+
+Opinion Stage polls are social polls which means that social network identities are used for polling the participants. This makes the poll more engaging than the typical poll, letting users discover who supports what and how each user voted in other polls. You can also follow users and then filter the poll results by the people you follow. Using social polls, also improves the distribution of the poll in social networks. 
+
+= Do you require users to identify by logging-in before voting? =
+
+Yes, we currently support Facebook login, but are working to add additional poll login options such as Twitter. 
+ 
+= Do you support anonymous voting? =
+
+Yes, while you do need to login to participate in the poll, you can vote anonymously so that nobody besides yourself knows what you voted in the poll.
+
+= How do users share the poll & their vote in social networks? = 
+
+Users can either share the poll question from the sharing menu, or share their votes from the Facebook & Twitter sharing buttons that are displayed after voting. We never share anything on the users' behalf.
+
+= What are the benifits of using social polls? =
+
+Using social polls improves user engagement and adds additional traffic from social networks.
+
+= What types of polls do you support? =
+
+We currently support two-sided polls. However we will soon be supporting additional types of polls.
+
+= Do you plan to add debating capabilities to the poll? =
+
+Yes, we plan to add the option to allow debating the poll. Users will be able to add a text explanation to their votes so the vote can be debated.
+
+= How do I add a poll to my post/page? =
+
+Follow these steps:
+
+1. Create a new poll / debate from <a href="http://www.opinionstage.com/new_debate?ref=wp-v-poll" target="_blank">here</a>
+2. From the poll page, copy the embed ID located near the embed button 
+3. Click on the poll icon in the WordPress text editor to open the embed dialog
+4. Paste the ID you copied in the embed dialog
+
+= What is the embed ID and where can I find it? =
+
+Each poll has a unique ID which identifies it. The poll ID can be found in the poll embed button on the poll / debate page.
+
+= Can I embed a poll manually? =
+
+Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], where the xyz represents the poll ID.
+
+== Screenshots ==
+
+1. **Two sided poll: before vote** - Example of a poll with 2 videos, you can filter the poll results by the people you follow
+2. **Two sided poll: after vote** - After voting in the poll, users are encouraged to share their poll vote in Facebook or Twitter driving additional traffic to the site
+3. **Full list of poll voters** - Click 'view all', to view the full list of poll voters and discover who supports what. You can also follow users from this screen
+4. **Profile of poll participant** - click on one of the poll participants to view his/her opinion profile. The profile includes votes in other polls, list of following users and more
+5. **Start a poll / debate form** - Just add a question, add sides & select a topic and you're ready to go. Click the 'show details' for advanced poll options
+6. **Insert social poll icon** - From the WordPress editor, click on the social poll icon to add a poll to the post/page
+
+== Upgrade Notice == 
+
+N/A
+
+== Changelog == 
+ = Version 1.0.1 (26 Aug 2012) = 
+  * Improvements in the embed flow to ease insertion of polls
+ = Version 1.0.0 (15 Aug 2012) = 
+  * First social poll version  
