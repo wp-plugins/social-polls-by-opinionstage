@@ -164,7 +164,7 @@ function opinionstage_add_poll_popup() {
 		</p>
 		<br>
 		<p><strong>Haven't created a poll yet? / Don't know the poll ID?</strong></p>
-		<p>1) &nbsp; Start a new poll using the& <?php echo opinionstage_create_link('start a poll form', 'new_debate', ''); ?> or find an existing poll <?php echo opinionstage_create_link('here', 'topics/all', ''); ?></p>
+		<p>1) &nbsp; Start a new poll using the <?php echo opinionstage_create_link('start a poll form', 'new_debate', ''); ?> or find an existing poll <?php echo opinionstage_create_link('here', 'topics/all', ''); ?></p>
 		<p>2) &nbsp; From the poll page, copy the embed ID (located near the embed button)</p>
 		<?php echo opinionstage_insturctions_html_suffix(); ?>
 	  </div>
