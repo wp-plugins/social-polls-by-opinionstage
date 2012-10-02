@@ -25,13 +25,15 @@ The social poll plug-in is completely free and is easy to install and use.
  * Follow users that participated in the poll
  * Get notified about poll votes of users you follow (optionally)
  * Filter the poll results by users you follow
+ * Filter the poll results by gender 
  * Discover what poll participants voted in other polls by visiting their profile
- * Get the poll question & poll votes shared in social networks, driving additional traffic to the site
+ * Get the poll question & poll votes shared in social networks, driving additional traffic to your site
+ * Manage all your polls from one dashboard	
  * ... And many more features to come!
 
 = About Opinion Stage: =
 
-Opinion Stage polls / debates bring together social network users with common interests and a desire to express, debate and follow opinions. For more details on Opinion Stage's polls & debates, visit <a href="http://www.opinionstage.com?ref=wp-v-poll" target="_blank">the Opinion Stage site.</a>
+Opinion Stage offers web sites a highly engaging social polls & debates solution. For more details on Opinion Stage's polls & debates, visit <a href="http://www.opinionstage.com?o=wp-v-readme" target="_blank">the Opinion Stage site.</a>
 
 == Installation ==
 
@@ -43,7 +45,7 @@ Opinion Stage polls / debates bring together social network users with common in
 
 = What sets Opinion Stage polls apart from other polling solutions? =
 
-Opinion Stage polls are social polls which means that social network identities are used for polling the participants. This makes the poll more engaging than the typical poll, letting users discover who supports what and how each user voted in other polls. You can also follow users and then filter the poll results by the people you follow. Using social polls, also improves the distribution of the poll in social networks. 
+Opinion Stage polls are social polls which means that social network identities are used for polling the participants. This makes the poll more engaging than the typical poll, letting users discover who supports what and how each user voted in other polls. You can also follow users and then filter the poll results by the people you follow. In addition, using social polls improves the distribution of the poll in social networks. 
 
 = Do you require users to identify by logging-in before voting? =
 
@@ -67,14 +69,14 @@ We currently support two-sided polls. However we will soon be supporting additio
 
 = Do you plan to add debating capabilities to the poll? =
 
-Yes, we plan to add the option to allow debating the poll. Users will be able to add a text explanation to their votes so the vote can be debated.
+Yes, we plan to add the option to debate the poll. Users will be able to add a text explanation to their votes so the vote can be debated.
 
 = How do I add a poll to my post/page? =
 
 Follow these steps:
 
-1. Create a new poll / debate from <a href="http://www.opinionstage.com/new_debate?ref=wp-v-poll" target="_blank">here</a>
-2. From the poll page, copy the embed ID located near the embed button 
+1. Create a new poll / debate from <a href="http://www.opinionstage.com/new_debate?o=wp-v-readme" target="_blank">here</a>
+2. From the poll page, copy the embed ID 
 3. Click on the poll icon in the WordPress text editor to open the embed dialog
 4. Paste the ID you copied in the embed dialog
 
@@ -100,7 +102,13 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 1.1.0 (2 Oct 2012) =
+  * Simplified create & embed poll work flow by adding menus to create poll, manage polls and to a help page on social polls
+  * Added an optional gender filter to the poll, so that poll results can be viewed by gender
+  * Added a central dashboard for managing all polls
+  * Added the option to display a detailed text description of the poll question to the poll widget
+  * Added the ability to configure which image is shared when sharing the poll or the poll vote on Facebook
  = Version 1.0.1 (26 Aug 2012) = 
-  * Improvements in the embed flow to ease insertion of polls
+  * Improvements in the poll embed flow to ease insertion of polls
  = Version 1.0.0 (15 Aug 2012) = 
   * First social poll version  
