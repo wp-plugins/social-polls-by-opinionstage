@@ -123,7 +123,7 @@ function opinionstage_add_poll_page() {
   ?>
   <h1><strong>Opinion Stage Social Polls</strong></h1>
   <h3><strong>To add a social poll to your post/page:</strong></h3>
-  <p>1) &nbsp; <?php echo opinionstage_create_link('Start a new poll', 'widget', ''); ?> or locate a poll from <?php echo opinionstage_create_link('your dashboard', 'topics/all', ''); ?></p>
+  <p>1) &nbsp; <?php echo opinionstage_create_link('Start a new poll', 'widget', ''); ?> or locate a poll from <?php echo opinionstage_create_link('your dashboard', 'dashboard', ''); ?></p>
   <p>2) &nbsp; From the poll page, copy the embed ID (located near the embed button)</p>
   <p>3) &nbsp; From the WordPress post/page text editor, click on the social poll icon to open the insert poll dialog</p>
   <img src="http://a5.opinionstage-res.cloudinary.com/image/upload/c_fit,h_294,w_474/v1332371481/mw4b8djjlljrwjy2w3iqa.jpg" />

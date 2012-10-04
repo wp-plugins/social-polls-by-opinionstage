@@ -103,7 +103,6 @@ N/A
 
 == Changelog == 
  = Version 1.1.0 (2 Oct 2012) =
-  * Simplified create & embed poll work flow by adding menus to create poll, manage polls and to a help page on social polls
   * Added an optional gender filter to the poll, so that poll results can be viewed by gender
   * Added a central dashboard for managing all polls
   * Added the option to display a detailed text description of the poll question to the poll widget
