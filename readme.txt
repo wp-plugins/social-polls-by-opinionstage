@@ -102,7 +102,7 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
- = Version 1.2.0 (25 Nov 2012)
+ = Version 1.2.0 (25 Nov 2012) =
   * Poll width can now be set, supported poll widths are 400-620 pxl
   * Poll widget performance optimizations for high traffic polling deployments
   * Support customized color themes for the polls
