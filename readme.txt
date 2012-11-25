@@ -102,6 +102,10 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 1.2.0 (25 Nov 2012)
+  * Poll width can now be set, supported poll widths are 400-620 pxl
+  * Poll widget performance optimizations for high traffic polling deployments
+  * Support customized color themes for the polls
  = Version 1.1.0 (2 Oct 2012) =
   * Added an optional gender filter to the poll, so that poll results can be viewed by gender
   * Added a central dashboard for managing all polls

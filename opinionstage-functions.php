@@ -55,8 +55,7 @@ function opinionstage_create_embed_code($id) {
  * @return array - raw_data and a success flag
  */
 function opinionstage_get_contents($url) {
-    $response = wp_remote_get($url, array('header' => array('Accept' => 'application/json; charset=utf-8'),
-                                          'timeout' => 10));
+    $response = wp_remote_get($url, array('header' => array('Accept' => 'application/json; charset=utf-8')));
 
     return opinionstage_parse_response($response);
 }
