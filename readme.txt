@@ -7,7 +7,7 @@ Requires at least: 2.8
 Tested up to: 3.4.1
 Stable tag: trunk
  
-Add a social polling system to your blog. To add a social poll click on the social poll icon in the post/page text editor.
+Add a social polling system to your blog. Opinion Stage connects social networks to polling providing a rich & engaging polling experience.
 
 == Description ==
 
