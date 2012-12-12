@@ -28,6 +28,7 @@ The social poll plug-in is completely free and is easy to install and use.
  * Filter the poll results by gender 
  * Discover what poll participants voted in other polls by visiting their profile
  * Get the poll question & poll votes shared in social networks, driving additional traffic to your site
+ * Custimze the poll's width and the poll's theme
  * Manage all your polls from one dashboard	
  * ... And many more features to come!
 
@@ -65,7 +66,7 @@ Using social polls improves user engagement and adds additional traffic from soc
 
 = What types of polls do you support? =
 
-We currently support two-sided polls. However we will soon be supporting additional types of polls.
+We support both regular multiple-sided polls and a special head-to-head poll flavor (for the 2-sided polls)
 
 = Do you plan to add debating capabilities to the poll? =
 
@@ -75,9 +76,9 @@ Yes, we plan to add the option to debate the poll. Users will be able to add a t
 
 Follow these steps:
 
-1. Create a new poll / debate from <a href="http://www.opinionstage.com/new_debate?o=wp-v-readme" target="_blank">here</a>
-2. From the poll page, copy the embed ID 
-3. Click on the poll icon in the WordPress text editor to open the embed dialog
+1. Create a new poll / debate from <a href="http://www.opinionstage.com/widget?o=wp-v-readme" target="_blank">here</a>
+2. From the poll page, click get code and copy the embed ID 
+3. Click on the poll icon in the WordPress text editor to open the poll embed dialog
 4. Paste the ID you copied in the embed dialog
 
 = What is the embed ID and where can I find it? =
@@ -90,7 +91,7 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 
 == Screenshots ==
 
-1. **Two sided poll: before vote** - Example of a poll with 2 videos, you can filter the poll results by the people you follow
+1. **Two sided poll: before vote** - Example of a poll with 2 videos, you can filter the poll results by the people you follow or by gender of the poll participants
 2. **Two sided poll: after vote** - After voting in the poll, users are encouraged to share their poll vote in Facebook or Twitter driving additional traffic to the site
 3. **Full list of poll voters** - Click 'view all', to view the full list of poll voters and discover who supports what. You can also follow users from this screen
 4. **Profile of poll participant** - click on one of the poll participants to view his/her opinion profile. The profile includes votes in other polls, list of following users and more
@@ -102,6 +103,10 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 2.0.0 (12 Dec 2012) =
+  * Support for multiple sided polls
+  * Added the option to configure the URL in which the poll will be hosted. This will allow to direct additional traffic from social network shares and emails back to the location where the poll is hosted
+  * Added the option to set the order in which the poll results are displayed. You can either set it so that the poll sides are located in the order they were configured or set them so that the side with the most votes is displayed on top
  = Version 1.2.0 (25 Nov 2012) =
   * Poll width can now be set, supported poll widths are 400-620 pxl
   * Poll widget performance optimizations for high traffic polling deployments
