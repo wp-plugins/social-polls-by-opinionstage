@@ -103,6 +103,13 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 2.1.0 (7 Feb 2013) =  
+  * Polls are now displayed properlly in mobile environments
+  * Additional built-in poll themes 
+  * When clicking on poll participants, the user is now redirected to their social network profile
+  * Polls are now localized for Spanish
+  * You can now set whether you would like to display the number of votes in the poll
+  * Support for election polls (e.g. poll results displayed in points, add a minimum cliff, etc)  
  = Version 2.0.0 (12 Dec 2012) =
   * Support for multiple sided polls
   * Added the option to configure the URL in which the poll will be hosted. This will allow to direct additional traffic from social network shares and emails back to the location where the poll is hosted
