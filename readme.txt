@@ -76,7 +76,7 @@ Yes, we plan to add the option to debate the poll. Users will be able to add a t
 
 Follow these steps:
 
-1. Create a new poll / debate from <a href="http://www.opinionstage.com/widget?o=wp-v-readme" target="_blank">here</a>
+1. Create a new poll / debate from <a href="http://www.opinionstage.com?o=wp-v-readme" target="_blank">here</a>
 2. From the poll page, click get code and copy the embed ID 
 3. Click on the poll icon in the WordPress text editor to open the poll embed dialog
 4. Paste the ID you copied in the embed dialog
@@ -103,6 +103,10 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 2.2.0 (28 Feb 2013) =  
+  * Polls are now localized for Arabic
+  * Better support for sidebars (300px)
+  * Supporting longer side texts
  = Version 2.1.0 (7 Feb 2013) =  
   * Polls are now displayed properlly in mobile environments
   * Additional built-in poll themes 
