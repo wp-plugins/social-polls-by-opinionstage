@@ -103,12 +103,16 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 2.3.0 (12 March 2013) =  
+  * Improved creation flow of polls
+  * Added basic report per poll in Opininion-Stage dashboard 
+  * Added account report in Opininion-Stage dashboard 
  = Version 2.2.0 (28 Feb 2013) =  
   * Polls are now localized for Arabic
   * Better support for sidebars (300px)
   * Supporting longer side texts
  = Version 2.1.0 (7 Feb 2013) =  
-  * Polls are now displayed properlly in mobile environments
+  * Polls are now displayed properly in mobile environments
   * Additional built-in poll themes 
   * When clicking on poll participants, the user is now redirected to their social network profile
   * Polls are now localized for Spanish
