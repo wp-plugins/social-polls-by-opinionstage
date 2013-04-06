@@ -24,7 +24,7 @@ The social poll plug-in is completely free and is easy to install and use.
  * Filter the poll participant list according to vote
  * Follow users that participated in the poll
  * Get notified about poll votes of users you follow (optionally)
- * Filter the poll results by users you follow
+ * Filter the poll results by users you follow (e.g Facebook friends)
  * Filter the poll results by gender 
  * Discover what poll participants voted in other polls by visiting their profile
  * Get the poll question & poll votes shared in social networks, driving additional traffic to your site
@@ -76,14 +76,14 @@ Yes, we plan to add the option to debate the poll. Users will be able to add a t
 
 Follow these steps:
 
-1. Create a new poll / debate from <a href="http://www.opinionstage.com?o=wp-v-readme" target="_blank">here</a>
+1. Create a new poll from <a href="http://www.opinionstage.com?o=wp-v-readme" target="_blank">here</a>
 2. From the poll page, click get code and copy the embed ID 
 3. Click on the poll icon in the WordPress text editor to open the poll embed dialog
 4. Paste the ID you copied in the embed dialog
 
 = What is the embed ID and where can I find it? =
 
-Each poll has a unique ID which identifies it. The poll ID can be found in the poll embed button on the poll / debate page.
+Each poll has a unique ID which identifies it. The poll ID can be found in the poll embed button on the poll page.
 
 = Can I embed a poll manually? =
 
@@ -95,7 +95,7 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 2. **Two sided poll: after vote** - After voting in the poll, users are encouraged to share their poll vote in Facebook or Twitter driving additional traffic to the site
 3. **Full list of poll voters** - Click 'view all', to view the full list of poll voters and discover who supports what. You can also follow users from this screen
 4. **Profile of poll participant** - click on one of the poll participants to view his/her opinion profile. The profile includes votes in other polls, list of following users and more
-5. **Start a poll / debate form** - Just add a question, add sides & select a topic and you're ready to go. Click the 'show details' for advanced poll options
+5. **Start a poll form** - Just add a question, add sides & select a topic and you're ready to go. Click the 'show details' for advanced poll options
 6. **Insert social poll icon** - From the WordPress editor, click on the social poll icon to add a poll to the post/page
 
 == Upgrade Notice == 
@@ -103,35 +103,39 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
- = Version 2.3.0 (12 March 2013) =  
+ = Version 2.4.0 =
+  * Better support for anonymous voting
+  * Improved embed options to support both dynamic and constant width for the polls
+  * Polls can now be closed from the Opininion-Stage dashboard 
+ = Version 2.3.0 =
   * Improved creation flow of polls
   * Added basic report per poll in Opininion-Stage dashboard 
   * Added account report in Opininion-Stage dashboard 
- = Version 2.2.0 (28 Feb 2013) =  
+ = Version 2.2.0 =
   * Polls are now localized for Arabic
   * Better support for sidebars (300px)
   * Supporting longer side texts
- = Version 2.1.0 (7 Feb 2013) =  
+ = Version 2.1.0 =
   * Polls are now displayed properly in mobile environments
   * Additional built-in poll themes 
   * When clicking on poll participants, the user is now redirected to their social network profile
   * Polls are now localized for Spanish
   * You can now set whether you would like to display the number of votes in the poll
   * Support for election polls (e.g. poll results displayed in points, add a minimum cliff, etc)  
- = Version 2.0.0 (12 Dec 2012) =
+ = Version 2.0.0 =
   * Support for multiple sided polls
   * Added the option to configure the URL in which the poll will be hosted. This will allow to direct additional traffic from social network shares and emails back to the location where the poll is hosted
   * Added the option to set the order in which the poll results are displayed. You can either set it so that the poll sides are located in the order they were configured or set them so that the side with the most votes is displayed on top
- = Version 1.2.0 (25 Nov 2012) =
+ = Version 1.2.0 =
   * Poll width can now be set, supported poll widths are 400-620 pxl
   * Poll widget performance optimizations for high traffic polling deployments
   * Support customized color themes for the polls
- = Version 1.1.0 (2 Oct 2012) =
+ = Version 1.1.0 =
   * Added an optional gender filter to the poll, so that poll results can be viewed by gender
   * Added a central dashboard for managing all polls
   * Added the option to display a detailed text description of the poll question to the poll widget
   * Added the ability to configure which image is shared when sharing the poll or the poll vote on Facebook
- = Version 1.0.1 (26 Aug 2012) = 
+ = Version 1.0.1 =
   * Improvements in the poll embed flow to ease insertion of polls
- = Version 1.0.0 (15 Aug 2012) = 
+ = Version 1.0.0 =
   * First social poll version  
