@@ -103,6 +103,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 2.5.0 =
+  * Added support for multiple selection polls
  = Version 2.4.0 =
   * Better support for anonymous voting
   * Improved embed options to support both dynamic and constant width for the polls
