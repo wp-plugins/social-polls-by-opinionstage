@@ -103,6 +103,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 2.6.0 =
+  * Additional customizations options to the poll: Define which filters to show, social sharing bar removal
+  * Anonymous voting can be enabled / disabled by poll creator
  = Version 2.5.0 =
   * Added support for multiple selection polls
  = Version 2.4.0 =
