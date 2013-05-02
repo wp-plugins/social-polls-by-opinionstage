@@ -103,6 +103,10 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 2.8.0 =
+  * Improved editing process of polls by adding a preview to the editing screen
+  * Additional layout customizations for polls - hide top bars, add bottom padding
+  * Polls can now be reset
  = Version 2.7.0 =
   * Additional lanugages support (German, Italian, Serbian)
   * Additional customizations for the vote sharing process
