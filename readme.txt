@@ -103,6 +103,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 3.0.0 =
+  * New hybrid voting method allowing users to vote either via a social profile or completely  anonymously 
  = Version 2.9.0 =
   * Added support for anonymous voting via cookies
  = Version 2.8.0 =
