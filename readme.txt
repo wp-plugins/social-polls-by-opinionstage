@@ -103,6 +103,10 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 3.1.0 =
+  * Poll creator can select number of allowed answers
+  * FB Sharing flow optimizations
+  * Poll results can be shown from the Opinion-Stage dashboard
  = Version 3.0.0 =
   * New hybrid voting method allowing users to vote either via a social profile or completely  anonymously 
  = Version 2.9.0 =
