@@ -127,7 +127,7 @@ function opinionstage_add_poll_page() {
 		  <h2>Actions</h2>
 		  <ul class="os_links_list">
 			<li><?php echo opinionstage_create_link('Create a Social Poll', 'new_poll', ''); ?></li>
-			<li><?php echo opinionstage_create_link('Manage Your Polls (Dashboard)', 'dashboard', ''); ?></li>
+			<li><?php echo opinionstage_create_link('Manage Your Polls', 'dashboard', ''); ?></li>
 		  </ul>
 		  <h2>Help</h2>
 		  <ul class="os_links_list">
@@ -173,7 +173,7 @@ function opinionstage_add_poll_popup() {
 		<p><strong>Haven't created a poll yet?</strong></p>
 		<p><?php echo opinionstage_create_link('Create a new poll', 'new_poll', ''); ?></p>
 		<p><strong>Don't know the poll ID?</strong></p>
-		<?php echo opinionstage_create_link('Find ID of an existing poll (Dashboard)', 'dashboard', ''); ?>
+		<?php echo opinionstage_create_link('Find ID of an existing poll', 'dashboard', ''); ?>
 		<p><strong>Need help?</strong></p>
 		<p><?php echo opinionstage_create_link('Contact us', 'contact_requests/new', ''); ?></p>
 	  </div>
