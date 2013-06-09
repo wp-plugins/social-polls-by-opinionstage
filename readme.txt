@@ -4,37 +4,40 @@ Donate link:
 Tags: poll, polls, polling, vote, voting, debate, survey, social, opinionstage, opinion stage 
 
 Requires at least: 2.8
-Tested up to: 3.4.1
+Tested up to: 3.5.1
 Stable tag: trunk
  
-Add a social polling system to your blog. Opinion Stage connects social networks to polling, providing a rich & engaging polling experience.
+Add a powerful & easy-to-use social polling & voting solution to your web site.
 
 == Description ==
 
-The Opinion Stage social poll plug-in allows you to easily integrate a social poll in any blog post/page.
+The Opinion Stage social poll plug-in allows you to easily integrate social polls into your site and Facebook page.
 <BR>
-The social polls are designed to both improve user engagement and to drive additional traffic from social networks to the page in which the poll is embedded.
 <BR>
-The social poll plug-in is completely free and is easy to install and use.
+The social polls are designed to improve user engagement, drive traffic from social networks to the page in which the poll is embedded and much more.
+<BR>
+<BR>
+The social poll plug-in is completely free and is very easy to install and use.
 
 = Main Poll Features: =
 
- * Survey site visitors using their social network identities
+ * Create, delete or edit your polls at anytime
+ * Poll your site visitors using their social network identities or anonymously
  * View the full poll participant list
- * Filter the poll participant list according to vote
- * Follow users that participated in the poll
- * Get notified about poll votes of users you follow (optionally)
+ * Filter the poll participant list according to side votes
+ * Follow users that participated in the poll 
  * Filter the poll results by users you follow (e.g Facebook friends)
- * Filter the poll results by gender 
- * Discover what poll participants voted in other polls by visiting their profile
+ * Filter the poll results by demographic filters (e.g. by gender)
  * Get the poll question & poll votes shared in social networks, driving additional traffic to your site
- * Custimze the poll's width and the poll's theme
+ * Customize the poll's width and the poll's theme
+ * Set the details of the social sharing (e.g. text, image & link displayed in the facebook sharing dialog)
  * Manage all your polls from one dashboard	
- * ... And many more features to come!
+ * Customize the poll to your needs (e.g. show/don't show number of votes, show results before / after voting, order sides by most votes or as configured, etc) 
+ * ... And much more!
 
 = About Opinion Stage: =
 
-Opinion Stage offers web sites a highly engaging social polls & debates solution. For more details on Opinion Stage's polls & debates, visit <a href="http://www.opinionstage.com?o=wp-v-readme" target="_blank">the Opinion Stage site.</a>
+Opinion Stage offers web sites a highly engaging social polling & voting solution. For more details on Opinion Stage's polling solution, visit <a href="http://www.opinionstage.com?o=wp-v-readme" target="_blank">the Opinion Stage site.</a>
 
 == Installation ==
 
@@ -46,23 +49,23 @@ Opinion Stage offers web sites a highly engaging social polls & debates solution
 
 = What sets Opinion Stage polls apart from other polling solutions? =
 
-Opinion Stage polls are social polls which means that social network identities are used for polling the participants. This makes the poll more engaging than the typical poll, letting users discover who supports what and how each user voted in other polls. You can also follow users and then filter the poll results by the people you follow. In addition, using social polls improves the distribution of the poll in social networks. 
+Opinion Stage polls are social polls which means that social network identities are used for polling the participants. This makes the poll more engaging than the typical poll, letting users discover who supports what and how each user voted in other polls. You can also follow users and then filter the poll results by the people you follow. Using social polls improves the distribution of the poll in social networks, allows gathering contact, demographic & social statistics from the poll participants. Lastly, social polls also work very well for elections & competitions.
 
 = Do you require users to identify by logging-in before voting? =
 
-Yes, we currently support Facebook login, but are working to add additional poll login options such as Twitter. 
+When creating the polls you can determine if a social profile is required, if it is optional or if it is not required at all for voting. Opinion Stage polls currently support Facebook & Twitter login, and will include additional poll login options in the future. 
  
 = Do you support anonymous voting? =
 
-Yes, while you do need to login to participate in the poll, you can vote anonymously so that nobody besides yourself knows what you voted in the poll.
+When using a social profile to participate in the poll, you can hide your vote so that nobody besides yourself knows what you voted in the poll. In addition, the administator can configure that users can vote anonymously in the poll without requiring a social profile.
 
 = How do users share the poll & their vote in social networks? = 
 
-Users can either share the poll question from the sharing menu, or share their votes from the Facebook & Twitter sharing buttons that are displayed after voting. We never share anything on the users' behalf.
+Users can either share the poll question from the social (e.g. Facebook & Twitter) sharing buttons that are displayed on the top of the poll or by sharing the social sharing dialog that is displayed automatically after they vote in the poll. Opinion Stage never shares anything on the users' behalf without getting explicit permission for it.
 
 = What are the benifits of using social polls? =
 
-Using social polls improves user engagement and adds additional traffic from social networks.
+Using social polls offer the following main benefits: (1) improves user engagement on the site (2) drives traffic from social networks to the site (3) allow you to discover the the person behind the opinion (4) serves as a great tool for running elections & contests (5) allow you to gather contact, social & demographic information from the poll participants
 
 = What types of polls do you support? =
 
@@ -77,13 +80,12 @@ Yes, we plan to add the option to debate the poll. Users will be able to add a t
 Follow these steps:
 
 1. Create a new poll from <a href="http://www.opinionstage.com?o=wp-v-readme" target="_blank">here</a>
-2. From the poll page, click get code and copy the embed ID 
-3. Click on the poll icon in the WordPress text editor to open the poll embed dialog
-4. Paste the ID you copied in the embed dialog
+2. After the poll was created, from the dashboard, click "Add to Website" link and copy the WordPress poll code ( e.g. [socialpoll id="9543"] )
+3. Paste the poll code you copied into the blog post/page/section
 
 = What is the embed ID and where can I find it? =
 
-Each poll has a unique ID which identifies it. The poll ID can be found in the poll embed button on the poll page.
+Each poll has a unique ID which identifies it. The poll ID can be found in the WordPress code (e.g. if [socialpoll id="9543"] is the WordPress code, 9543 is the poll ID)
 
 = Can I embed a poll manually? =
 
@@ -91,11 +93,11 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 
 == Screenshots ==
 
-1. **Two sided poll: before vote** - Example of a poll with 2 videos, you can filter the poll results by the people you follow or by gender of the poll participants
-2. **Two sided poll: after vote** - After voting in the poll, users are encouraged to share their poll vote in Facebook or Twitter driving additional traffic to the site
+1. **Multiple-choice poll** - Example of a multiple-choice poll, note that you can view who voted what in the poll and view the poll voters social profile
+2. **Head-to-head poll** - Example of a head-to-head poll with 2 images. In this example, you can filter the poll results by the people you follow or by the gender of the poll participants
 3. **Full list of poll voters** - Click 'view all', to view the full list of poll voters and discover who supports what. You can also follow users from this screen
-4. **Profile of poll participant** - click on one of the poll participants to view his/her opinion profile. The profile includes votes in other polls, list of following users and more
-5. **Start a poll form** - Just add a question, add sides & select a topic and you're ready to go. Click the 'show details' for advanced poll options
+4. **Poll social sharing dialog** - after voting in the poll, the user is offered to share the poll vote in the social networks he uses. When creating a poll, you can set the link, text & image that are shared in social networks.
+5. **Start a poll form** - Just add a question, add sides and you're ready to go. Optionally set & edit many advanced poll settings to optimize the poll display & funcionality
 6. **Insert social poll icon** - From the WordPress editor, click on the social poll icon to add a poll to the post/page
 
 == Upgrade Notice == 
@@ -103,38 +105,40 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 4.0.0 =
+  * UI improvemnts for the polls (filters, border etc)
  = Version 3.1.0 =
-  * Poll creator can select number of allowed answers
-  * FB Sharing flow optimizations
-  * Poll results can be shown from the Opinion-Stage dashboard
+  * Poll creator can select number of allowed poll answers
+  * FB poll sharing flow optimizations
+  * Poll results can be shown from the Opinion-Stage poll dashboard
  = Version 3.0.0 =
-  * New hybrid voting method allowing users to vote either via a social profile or completely  anonymously 
+  * New hybrid voting method added to the polls, allowing users to vote either via a social profile or completely  anonymously 
  = Version 2.9.0 =
-  * Added support for anonymous voting via cookies
+  * Added support for anonymous poll voting
  = Version 2.8.0 =
-  * Improved editing process of polls by adding a preview to the editing screen
+  * Improved editing process of polls by adding a preview to the poll editing screen
   * Additional layout customizations for polls - hide top bars, add bottom padding
   * Polls can now be reset
  = Version 2.7.0 =
-  * Additional lanugages support (German, Italian, Serbian)
-  * Additional customizations for the vote sharing process
+  * Additional poll lanugages support (German, Italian, Serbian)
+  * Additional poll customizations for the vote sharing process
  = Version 2.6.0 =
-  * Additional customizations options to the poll: Define which filters to show, social sharing bar removal
+  * Additional customizations options to the poll: Define which poll filters to show, poll social sharing bar removal
   * Hiding vote option can be enabled / disabled by poll creator
  = Version 2.5.0 =
   * Added support for multiple selection polls
  = Version 2.4.0 =
-  * Better support for hiding user votes
+  * Better support for hiding user votes in the poll
   * Improved embed options to support both dynamic and constant width for the polls
   * Polls can now be closed from the Opininion-Stage dashboard 
  = Version 2.3.0 =
   * Improved creation flow of polls
-  * Added basic report per poll in Opininion-Stage dashboard 
-  * Added account report in Opininion-Stage dashboard 
+  * Added basic report per poll in the Opinion Stage polls dashboard 
+  * Added account report in Opininion-Stage poll dashboard 
  = Version 2.2.0 =
   * Polls are now localized for Arabic
-  * Better support for sidebars (300px)
-  * Supporting longer side texts
+  * Better support for sidebar polls (300px)
+  * Supporting longer side texts in polls
  = Version 2.1.0 =
   * Polls are now displayed properly in mobile environments
   * Additional built-in poll themes 

@@ -119,17 +119,24 @@ function opinionstage_poll_menu() {
  * Instructions page for adding a poll 
  */
 function opinionstage_add_poll_page() {
+  opinionstage_add_stylesheet();
   ?>
-  <h1><strong>Opinion Stage Social Polls</strong></h1>
-  <h3><strong>To add a social poll to your post/page:</strong></h3>
-  <p>1) &nbsp; <?php echo opinionstage_create_link('Start a new poll', 'new_poll', ''); ?> or locate a poll from <?php echo opinionstage_create_link('your dashboard', 'dashboard', ''); ?></p>
-  <p>2) &nbsp; Click on 'Add to Website' link and copy the poll ID</p>
-  <p>3) &nbsp; From the WordPress post/page text editor, click on the social poll icon to open the insert poll dialog</p>
-  <img src="http://a5.opinionstage-res.cloudinary.com/image/upload/c_fit,h_294,w_474/v1332371481/mw4b8djjlljrwjy2w3iqa.jpg" />
-  <p>4) &nbsp; Paste the ID into the insert poll dialog</p>
-  <span>Note: Instead of steps 3 & 4, you can add the following code directly into the post/page: [socialpoll id="xyz"] , where xyz is the poll id.</span>
-  <br>
-  <?php echo opinionstage_insturctions_html_suffix(); ?>
+  <div class="opinionstage-wrap">
+	  <div id="opinionstage-head"></div>
+	  <div class="section">
+		  <h2>Actions</h2>
+		  <ul class="os_links_list">
+			<li><?php echo opinionstage_create_link('Create a Social Poll', 'new_poll', ''); ?></li>
+			<li><?php echo opinionstage_create_link('Manage Your Polls (Dashboard)', 'dashboard', ''); ?></li>
+		  </ul>
+		  <h2>Help</h2>
+		  <ul class="os_links_list">
+			<li><a href="http://www.opinionstage.com/publishers/wordpress?o=wp-v-poll" target="_blank"></a></li>
+			<li><a href="http://www.opinionstage.com/contact_requests/new?o=wp-v-poll" target="_blank" ></a></li>
+			<li><?php echo opinionstage_create_link('Contact Us for help', 'contact_requests/new', ''); ?></li>			
+		  </ul>	  
+	  </div>  
+  </div>
   <?php
 }
 
@@ -158,27 +165,22 @@ function opinionstage_add_poll_popup() {
 	<div id="opinionstage-insert-poll-form" style="display:none;">
       <div id="content">
 		<h1><strong>Insert a Social Poll</strong></h1>
-		<h3><strong>Enter Poll ID (e.g. 436):</strong></h3>
+		<h3><strong>Enter Poll ID (e.g. 4567):</strong></h3>
 		<p><input type="text" name="poll-id" id="opinionstage-poll-id" value="" /></p>
 		<p class="submit">
 		  <input type="button" id="opinionstage-submit" class="button-primary" value="Insert Poll" name="submit" />
 		</p>
-		<br>
-		<p><strong>Haven't created a poll yet? / Don't know the poll ID?</strong></p>
-		<p>1) &nbsp; <?php echo opinionstage_create_link('Start a new poll', 'new_poll', ''); ?> or locate a poll from <?php echo opinionstage_create_link('your dashboard', 'dashboard', ''); ?></p>
-		<p>2) &nbsp; Click on 'Add to Website' link and copy the poll ID</p>
-		<?php echo opinionstage_insturctions_html_suffix(); ?>
+		<p><strong>Haven't created a poll yet?</strong></p>
+		<p><?php echo opinionstage_create_link('Create a new poll', 'new_poll', ''); ?></p>
+		<p><strong>Don't know the poll ID?</strong></p>
+		<?php echo opinionstage_create_link('Find ID of an existing poll (Dashboard)', 'dashboard', ''); ?>
+		<p><strong>Need help?</strong></p>
+		<p><?php echo opinionstage_create_link('Contact us', 'contact_requests/new', ''); ?></p>
 	  </div>
 	</div>  
 	<?php
 }
 
-function opinionstage_insturctions_html_suffix() {
-	?>
-	<br>
-	Need more information? <?php echo opinionstage_create_link('click here', 'publishers/wordpress', ''); ?>. For support or feedback, please <?php echo opinionstage_create_link('contact us', 'contact_requests/new', ''); ?>  
-	<?php
-}
 /**
  * Utility function to create a link with the correct host and all the required information.
  */
@@ -189,6 +191,15 @@ function opinionstage_create_link($caption, $page, $params = "", $options = arra
 	$link = "http://".OPINIONSTAGE_SERVER_BASE."/".$page."?o=".OPINIONSTAGE_WIDGET_API_KEY.$params_prefix.$params;
 	
 	return "<a href=\"".$link."\"".($new_page ? " target='_blank'" : "")." style=".$style.">".$caption."</a>";
+}
+
+/**
+ * CSS file loading
+ */
+function opinionstage_add_stylesheet() {
+	// Respects SSL, Style.css is relative to the current file
+	wp_register_style( 'opinionstage-style', plugins_url('style.css', __FILE__) );
+	wp_enqueue_style( 'opinionstage-style' );
 }
 
 /**
