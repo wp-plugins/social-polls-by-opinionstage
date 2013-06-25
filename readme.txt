@@ -105,6 +105,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 4.1.0 =
+  * Multi-sided polls support addition of multimedia (video and image)
+  * Both head-to-head and multi-sided polls - Multimedia support auto-fit for different width (e.g mobile environment) 
  = Version 4.0.0 =
   * UI improvemnts for the polls (filters, border etc)
  = Version 3.1.0 =
