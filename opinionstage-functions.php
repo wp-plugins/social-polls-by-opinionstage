@@ -130,9 +130,8 @@ function opinionstage_add_poll_page() {
 			<li><?php echo opinionstage_create_link('Manage Your Polls', 'dashboard', ''); ?></li>
 		  </ul>
 		  <h2>Help</h2>
-		  <ul class="os_links_list">
-			<li><a href="http://www.opinionstage.com/publishers/wordpress?o=wp-v-poll" target="_blank"></a></li>
-			<li><a href="http://www.opinionstage.com/contact_requests/new?o=wp-v-poll" target="_blank" ></a></li>
+		  <ul class="os_links_list">			
+			<li><a href="https://opinionstage.zendesk.com/forums?o=wp-v-poll" target="_blank">FAQs and Help</a></li>					  
 			<li><?php echo opinionstage_create_link('Contact Us for help', 'contact_requests/new', ''); ?></li>			
 		  </ul>	  
 	  </div>  
@@ -170,12 +169,15 @@ function opinionstage_add_poll_popup() {
 		<p class="submit">
 		  <input type="button" id="opinionstage-submit" class="button-primary" value="Insert Poll" name="submit" />
 		</p>
-		<p><strong>Haven't created a poll yet?</strong></p>
-		<p><?php echo opinionstage_create_link('Create a new poll', 'new_poll', ''); ?></p>
-		<p><strong>Don't know the poll ID?</strong></p>
-		<?php echo opinionstage_create_link('Find ID of an existing poll', 'dashboard', ''); ?>
-		<p><strong>Need help?</strong></p>
-		<p><?php echo opinionstage_create_link('Contact us', 'contact_requests/new', ''); ?></p>
+		<p><strong>Haven't created a poll yet?</strong></br></br>
+			<?php echo opinionstage_create_link('Create a new poll', 'new_poll', ''); ?>
+		</p>
+		<p><strong>Don't know the poll ID?</strong></br></br>
+			<?php echo opinionstage_create_link('Find ID of an existing poll', 'dashboard', ''); ?>
+		</p>
+		<p><strong>Need help?</strong></br></br>
+			<a href="https://opinionstage.zendesk.com/forums?o=wp-v-poll" target="_blank">FAQs and Help</a>
+		</p>
 	  </div>
 	</div>  
 	<?php
