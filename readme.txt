@@ -11,7 +11,7 @@ Add a powerful & easy-to-use social polling & voting solution to your web site.
 
 == Description ==
 
-The Opinion Stage social poll plug-in allows you to easily integrate social polls into your site and Facebook page.
+The Opinion Stage social poll plug-in allows you to easily integrate social polls into your website and Facebook page.
 <BR>
 <BR>
 The social polls are designed to improve user engagement, drive traffic from social networks to the page in which the poll is embedded and much more.
