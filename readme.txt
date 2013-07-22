@@ -105,6 +105,15 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 4.3.0 =
+  * Multiple sided polls are supported for 150 widths and above
+  * Head-to-head polls are supported for 300 widths and above
+  * Poll style studio was improved to included many more poll style options
+  * New improved poll dashboard 
+  * Poll showcase was improved to include more poll examples and detailed explanations
+ = Version 4.2.0 =
+  * Multi-sided polls support addition of multimedia (video and image)
+  * Both head-to-head and multi-sided polls - Multimedia support auto-fit for different width (e.g mobile environment) 
  = Version 4.1.0 =
   * Multi-sided polls support addition of multimedia (video and image)
   * Both head-to-head and multi-sided polls - Multimedia support auto-fit for different width (e.g mobile environment) 
