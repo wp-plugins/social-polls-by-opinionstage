@@ -7,7 +7,7 @@ Requires at least: 2.8
 Tested up to: 3.5.1
 Stable tag: trunk
  
-Add a powerful & easy-to-use social polling & voting solution to your web site.
+Add a powerful & easy-to-use social polling solution to your web site.
 
 == Description ==
 
@@ -21,7 +21,7 @@ The social poll plug-in is completely free and is very easy to install and use.
 
 = Main Poll Features: =
 
- * Create, delete or edit your polls at anytime
+ * Create, delete or edit your polls
  * Poll your site visitors using their social network identities or anonymously
  * View the full poll participant list
  * Filter the poll participant list according to side votes
@@ -30,7 +30,7 @@ The social poll plug-in is completely free and is very easy to install and use.
  * Filter the poll results by demographic filters (e.g. by gender)
  * Get the poll question & poll votes shared in social networks, driving additional traffic to your site
  * Customize the poll's width and the poll's theme
- * Set the details of the social sharing (e.g. text, image & link displayed in the facebook sharing dialog)
+ * Set the details of the social sharing (e.g. text, image & link displayed in the facebook share)
  * Manage all your polls from one dashboard	
  * Customize the poll to your needs (e.g. show/don't show number of votes, show results before / after voting, order sides by most votes or as configured, etc) 
  * ... And much more!
@@ -105,6 +105,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 4.4.0 =
+  * Polls are now localized for Portuguese
+  * Various minor bug fixes
  = Version 4.3.0 =
   * Multiple sided polls are supported for 150 widths and above
   * Head-to-head polls are supported for 300 widths and above
@@ -118,7 +121,7 @@ N/A
   * Multi-sided polls support addition of multimedia (video and image)
   * Both head-to-head and multi-sided polls - Multimedia support auto-fit for different width (e.g mobile environment) 
  = Version 4.0.0 =
-  * UI improvemnts for the polls (filters, border etc)
+  * UI improvements for the polls (filters, border etc)
  = Version 3.1.0 =
   * Poll creator can select number of allowed poll answers
   * FB poll sharing flow optimizations
@@ -132,7 +135,7 @@ N/A
   * Additional layout customizations for polls - hide top bars, add bottom padding
   * Polls can now be reset
  = Version 2.7.0 =
-  * Additional poll lanugages support (German, Italian, Serbian)
+  * Additional poll languages support (German, Italian, Serbian)
   * Additional poll customizations for the vote sharing process
  = Version 2.6.0 =
   * Additional customizations options to the poll: Define which poll filters to show, poll social sharing bar removal
@@ -142,11 +145,11 @@ N/A
  = Version 2.4.0 =
   * Better support for hiding user votes in the poll
   * Improved embed options to support both dynamic and constant width for the polls
-  * Polls can now be closed from the Opininion-Stage dashboard 
+  * Polls can now be closed from the Opinion-Stage dashboard 
  = Version 2.3.0 =
   * Improved creation flow of polls
   * Added basic report per poll in the Opinion Stage polls dashboard 
-  * Added account report in Opininion-Stage poll dashboard 
+  * Added account report in Opinion-Stage poll dashboard 
  = Version 2.2.0 =
   * Polls are now localized for Arabic
   * Better support for sidebar polls (300px)
