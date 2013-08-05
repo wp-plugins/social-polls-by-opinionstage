@@ -4,36 +4,35 @@ Donate link:
 Tags: poll, polls, polling, vote, voting, debate, survey, social, opinionstage, opinion stage 
 
 Requires at least: 2.8
-Tested up to: 3.5.1
+Tested up to: 3.6
 Stable tag: trunk
  
 Add a powerful & easy-to-use social polling solution to your web site.
 
 == Description ==
 
-The Opinion Stage social poll plug-in allows you to easily integrate social polls into your website and Facebook page.
-<BR>
-<BR>
-The social polls are designed to improve user engagement, drive traffic from social networks to the page in which the poll is embedded and much more.
-<BR>
-<BR>
-The social poll plug-in is completely free and is very easy to install and use.
+The Opinion Stage social poll plug-in allows you to easily add social polls (or standard polls) to your website or Facebook page.
+<br>
+<br>
+Using Opinion Stage’s social polling solution, sites can improve engagement, drive traffic from social networks to the polls and site, discover contact, demographic and social attributes of the poll participants, and more. 
+<br>
+<br>
+The social poll plug-in is free and is very easy to install and use.
 
 = Main Poll Features: =
 
- * Create, delete or edit your polls
- * Poll your site visitors using their social network identities or anonymously
- * View the full poll participant list
- * Filter the poll participant list according to side votes
- * Follow users that participated in the poll 
- * Filter the poll results by users you follow (e.g Facebook friends)
- * Filter the poll results by demographic filters (e.g. by gender)
- * Get the poll question & poll votes shared in social networks, driving additional traffic to your site
- * Customize the poll's width and the poll's theme
- * Set the details of the social sharing (e.g. text, image & link displayed in the facebook share)
  * Manage all your polls from one dashboard	
- * Customize the poll to your needs (e.g. show/don't show number of votes, show results before / after voting, order sides by most votes or as configured, etc) 
- * ... And much more!
+ * Poll your site visitors using their social network identities or anonymously
+ * View the full poll participant list social profiles
+ * Follow poll participants to discover how they voted in different polls
+ * Filter the poll participant list according to side votes
+ * Filter the poll results based on social filters such as users you follow (e.g Facebook friends)
+ * Filter the poll results based on demographic filters such as gender
+ * Get the poll question & poll votes shared in social networks, driving social traffic to your poll and site
+ * Set the details of the social sharing (e.g. text, image & link displayed in the Facebook share) to optimize the share for improved visibility and click rates
+ * Customize the poll feature to match your needs (e.g. show/don't show number of votes, show results before / after voting, order sides by most votes or as configured, etc) 
+ * Customize the poll's size, font, colour yourself or select from pre-defined poll styles and poll sizes.
+ * ... much more!
 
 = About Opinion Stage: =
 
@@ -105,6 +104,11 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 4.5 =
+  * Localize polls for Russian and French
+  * New design for poll social login dialogue
+  * Polls now auto-detect https environments
+  * Various minor fixes and improvements to poll functionality
  = Version 4.4.0 =
   * Polls are now localized for Portuguese
   * Various minor bug fixes
