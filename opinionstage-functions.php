@@ -131,8 +131,8 @@ function opinionstage_add_poll_page() {
 		  </ul>
 		  <h2>Help</h2>
 		  <ul class="os_links_list">			
-			<li><a href="https://opinionstage.zendesk.com/forums?o=wp-v-poll" target="_blank">FAQs and Help</a></li>					  
-			<li><?php echo opinionstage_create_link('Contact Us for help', 'contact_requests/new', ''); ?></li>			
+			<li><a href="https://opinionstage.zendesk.com" target="_blank">FAQs and Help</a></li>					  
+			<li><a href="https://opinionstage.zendesk.com/anonymous_requests/new" target="_blank">Contact Us</a></li>					  
 		  </ul>	  
 	  </div>  
   </div>
