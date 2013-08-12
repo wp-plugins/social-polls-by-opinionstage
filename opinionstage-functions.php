@@ -126,7 +126,7 @@ function opinionstage_add_poll_page() {
 	  <div class="section">
 		  <h2>Actions</h2>
 		  <ul class="os_links_list">
-			<li><?php echo opinionstage_create_link('Create a Social Poll', 'new_poll', ''); ?></li>
+			<li><?php echo opinionstage_create_link('Create a Poll', 'new_poll', ''); ?></li>
 			<li><?php echo opinionstage_create_link('Manage Your Polls', 'dashboard', ''); ?></li>
 		  </ul>
 		  <h2>Help</h2>
@@ -163,7 +163,7 @@ function opinionstage_add_poll_popup() {
 	?>
 	<div id="opinionstage-insert-poll-form" style="display:none;">
       <div id="content">
-		<h1><strong>Insert a Social Poll</strong></h1>
+		<h1><strong>Insert a Poll</strong></h1>
 		<h3><strong>Enter Poll ID (e.g. 4567):</strong></h3>
 		<p><input type="text" name="poll-id" id="opinionstage-poll-id" value="" /></p>
 		<p class="submit">
