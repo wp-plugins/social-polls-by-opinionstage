@@ -104,10 +104,14 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
-= Version 4.55 =
-  *Added support for Google+ poll login
-  *Fixed a presentation issue with polls and https sites
-  *Fixed issue with poll display on Facebook pages
+ = Version 4.6 =
+  * Add polls to Facebook pages in 2-clicks feature added
+  * Enhanced poll reporting that includes poll result filters
+  * Brightcove video format now supported in the polls
+ = Version 4.55 =
+  * Added support for Google+ poll login
+  * Fixed a presentation issue with polls and https sites
+  * Fixed issue with poll display on Facebook pages
  = Version 4.5 =
   * Localize polls for Russian and French
   * New design for poll social login dialogue
