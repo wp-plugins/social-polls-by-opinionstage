@@ -104,6 +104,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 4.7.1 =
+  * Additional social filters added to the poll interface & poll report
+  * Optimize poll sharing scenarios
  = Version 4.7.0 =
   * Improvements on poll sharing scenarios
  = Version 4.6.0 =
