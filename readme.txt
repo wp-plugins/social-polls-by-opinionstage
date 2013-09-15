@@ -104,6 +104,11 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 4.8.0 =
+  * Improvements to poll style studio
+  * Added option to configure head to head polls not to show results before voting
+  * Added the option to configure all types of polls not to show results to voters
+  * Extended width support of head to head polls to 250-740 pxls 
  = Version 4.7.1 =
   * Additional social filters added to the poll interface & poll report
   * Optimize poll sharing scenarios
@@ -117,7 +122,7 @@ N/A
   * Added support for Google+ poll login
   * Fixed a presentation issue with polls and https sites
   * Fixed issue with poll display on Facebook pages
- = Version 4.5.5 =
+ = Version 4.5.0 =
   * Localize polls for Russian and French
   * New design for poll social login dialogue
   * Polls now auto-detect https environments
