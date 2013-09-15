@@ -104,7 +104,7 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
- = Version 4.8.0 =
+ = Version 5.0.0 =
   * Improvements to poll style studio
   * Added option to configure head to head polls not to show results before voting
   * Added the option to configure all types of polls not to show results to voters
