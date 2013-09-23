@@ -131,9 +131,9 @@ function opinionstage_add_poll_page() {
 		  </ul>
 		  <h2>Help</h2>
 		  <ul class="os_links_list">			
-			<li><a href="http://blog.opinionstage.zendesk.com" target="_blank">Opinion Stage Blog</a></li>					  
 			<li><a href="https://opinionstage.zendesk.com/hc/en-us/requests/new" target="_blank">Contact Us</a></li>					  
-			<li><a href="http://opinionstage.com/showcase" target="_blank">Opinion Stage Showcase</a></li>					  
+			<li><a href="http://blog.opinionstage.com" target="_blank">Blog</a></li>					  
+			<li><a href="http://opinionstage.com/showcase" target="_blank">Showcase</a></li>					  
 		  </ul>	  
 	  </div>  
   </div>
