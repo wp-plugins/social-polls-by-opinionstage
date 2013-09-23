@@ -7,17 +7,17 @@ Requires at least: 2.8
 Tested up to: 3.6
 Stable tag: trunk
  
-Add a powerful & easy-to-use social polling solution to your web site.
+Add a powerful & easy-to-use social polling solution to your WordPress site.
 
 == Description ==
 
-The Opinion Stage social poll plug-in allows you to easily add social polls (or standard polls) to your website or Facebook page.
+The Opinion Stage online polling WordPress plug-in allows you to easily add social polls (or standard polls) to your website or Facebook page.
 <br>
 <br>
-Using Opinion Stage’s social polling solution, sites can improve engagement, drive traffic from social networks to the polls and site, discover contact, demographic and social attributes of the poll participants, and more. 
+Using Opinion Stage’s online polling / online voting solution, sites can improve engagement, drive traffic from social networks to the polls and site, discover contact, demographic and social attributes of the poll participants, and more. 
 <br>
 <br>
-The social poll plug-in is free and is very easy to install and use.
+The online poll WordPress plug-in is free and is very easy to install and use.
 
 = Main Poll Features: =
 
@@ -36,7 +36,7 @@ The social poll plug-in is free and is very easy to install and use.
 
 = About Opinion Stage: =
 
-Opinion Stage offers web sites a highly engaging social polling & voting solution. For more details on Opinion Stage's polling solution, visit <a href="http://www.opinionstage.com?o=wp-v-readme" target="_blank">the Opinion Stage site.</a>
+Opinion Stage offers web sites a highly engaging online polling / onling voting solution. For more details on Opinion Stage's onling polling solution, visit <a href="http://www.opinionstage.com?o=wp-v-readme" target="_blank">the Opinion Stage site.</a>
 
 == Installation ==
 
@@ -104,6 +104,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 5.1.0 =
+  *Add Facebook comments to polls added to Facebook pages
+  *Add the option to preview the poll in different widths
  = Version 5.0.0 =
   * Improvements to poll style studio
   * Added option to configure head to head polls not to show results before voting

@@ -131,9 +131,9 @@ function opinionstage_add_poll_page() {
 		  </ul>
 		  <h2>Help</h2>
 		  <ul class="os_links_list">			
-			<li><a href="http://opinionstage.zendesk.com" target="_blank">FAQs and Help</a></li>					  
-			<li><a href="http://opinionstage.zendesk.com/anonymous_requests/new" target="_blank">Contact Us</a></li>					  
-			<li><a href="http://opinionstage.com/showcase" target="_blank">View Showcase</a></li>					  
+			<li><a href="http://blog.opinionstage.zendesk.com" target="_blank">Opinion Stage Blog</a></li>					  
+			<li><a href="https://opinionstage.zendesk.com/hc/en-us/requests/new" target="_blank">Contact Us</a></li>					  
+			<li><a href="http://opinionstage.com/showcase" target="_blank">Opinion Stage Showcase</a></li>					  
 		  </ul>	  
 	  </div>  
   </div>
@@ -175,9 +175,6 @@ function opinionstage_add_poll_popup() {
 		</p>
 		<p><strong>Don't know the poll ID?</strong></br></br>
 			<?php echo opinionstage_create_link('Find ID of an existing poll', 'dashboard', ''); ?>
-		</p>
-		<p><strong>Need help?</strong></br></br>
-			<a href="http://opinionstage.zendesk.com" target="_blank">FAQs and Help</a>
 		</p>
 	  </div>
 	</div>  
