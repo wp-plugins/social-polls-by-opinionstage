@@ -104,6 +104,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 5.2.0 =
+  *Revamp of the poll social sharing settings
+  *revamp of add poll to website screen
  = Version 5.1.0 =
   *Add Facebook comments to polls added to Facebook pages
   *Add the option to preview the poll in different widths
