@@ -36,7 +36,7 @@ The online poll WordPress plug-in is free and is very easy to install and use.
 
 = About Opinion Stage: =
 
-Opinion Stage offers web sites a highly engaging online polling / onling voting solution. For more details on Opinion Stage's onling polling solution, visit <a href="http://www.opinionstage.com?o=wp-v-readme" target="_blank">the Opinion Stage site.</a>
+Opinion Stage offers web sites a highly engaging online polling / onling voting solution. For more details on Opinion Stage's onling polling solution, visit <a href="http://www.opinionstage.com?o=wp" target="_blank">the Opinion Stage site.</a>
 
 == Installation ==
 
@@ -78,13 +78,13 @@ Yes, we plan to add the option to debate the poll. Users will be able to add a t
 
 Follow these steps:
 
-1. Create a new poll from <a href="http://www.opinionstage.com?o=wp-v-readme" target="_blank">here</a>
-2. After the poll was created, from the dashboard, click "Add to Website" link and copy the WordPress poll code ( e.g. [socialpoll id="9543"] )
+1. Create a new poll from <a href="http://www.opinionstage.com?o=wp" target="_blank">here</a>
+2. After the poll was created, from the dashboard, click "Add to Website" link and copy the WordPress poll code ( e.g. [socialpoll id="119543"] )
 3. Paste the poll code you copied into the blog post/page/section
 
 = What is the embed ID and where can I find it? =
 
-Each poll has a unique ID which identifies it. The poll ID can be found in the WordPress code (e.g. if [socialpoll id="9543"] is the WordPress code, 9543 is the poll ID)
+Each poll has a unique ID which identifies it. The poll ID can be found in the WordPress code (e.g. if [socialpoll id="119543"] is the WordPress code, 119543 is the poll ID)
 
 = Can I embed a poll manually? =
 
@@ -104,6 +104,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+= Version 5.3.0 =
+  *Add a clone function that allows to easily create multiple polls from the same template
+  *Add the option to schedule when the poll will be closed
  = Version 5.2.0 =
   *Revamp of the poll social sharing settings
   *revamp of add poll to website screen

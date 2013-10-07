@@ -131,9 +131,9 @@ function opinionstage_add_poll_page() {
 		  </ul>
 		  <h2>Help</h2>
 		  <ul class="os_links_list">			
+			<li><a href="http://blog.opinionstage.com/wordpress-poll-how-to-add-polls-to-wordpress-sites?o=wp" target="_blank">Help</a></li>					  
+			<li><?php echo opinionstage_create_link('Showcase', 'showcase', ''); ?></li>
 			<li><a href="https://opinionstage.zendesk.com/hc/en-us/requests/new" target="_blank">Contact Us</a></li>					  
-			<li><a href="http://blog.opinionstage.com/wordpress-poll-how-to-add-polls-to-wordpress-sites/" target="_blank">Help</a></li>					  
-			<li><a href="http://opinionstage.com/showcase" target="_blank">Showcase</a></li>					  
 		  </ul>	  
 	  </div>  
   </div>
