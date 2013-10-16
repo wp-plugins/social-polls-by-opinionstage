@@ -104,7 +104,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
-= Version 5.3.0 =
+ = Version 5.4.0 =
+  *Added to the poll results screen the following poll stats: poll engagement stats, poll social stats & poll traffic stats
+ = Version 5.3.0 =
   *Add a clone function that allows to easily create multiple polls from the same template
   *Add the option to schedule when the poll will be closed
  = Version 5.2.0 =
