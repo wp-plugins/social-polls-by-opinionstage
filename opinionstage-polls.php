@@ -13,7 +13,7 @@ Author URI: http://www.opinionstage.com
 define('OPINIONSTAGE_SERVER_BASE', "www.opinionstage.com"); /* Don't include the protocol, added dynamically */
 define('OPINIONSTAGE_WIDGET_VERSION', '5.4.0');
 define('OPINIONSTAGE_WIDGET_PLUGIN_NAME', 'Social Polls by OpinionStage');
-define('OPINIONSTAGE_WIDGET_API_KEY', 'wp');
+define('OPINIONSTAGE_WIDGET_API_KEY', 'wp35e8');
 define('OPINIONSTAGE_WIDGET_SHORTCODE', 'socialpoll');
 define('OPINIONSTAGE_WIDGET_UNIQUE_ID', 'social-polls-by-opinionstage');
 define('OPINIONSTAGE_WIDGET_UNIQUE_LOCATION', __FILE__);

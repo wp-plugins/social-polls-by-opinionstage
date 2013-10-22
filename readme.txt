@@ -36,7 +36,7 @@ The online poll WordPress plug-in is free and is very easy to install and use.
 
 = About Opinion Stage: =
 
-Opinion Stage offers web sites a highly engaging online polling / onling voting solution. For more details on Opinion Stage's onling polling solution, visit <a href="http://www.opinionstage.com?o=wp" target="_blank">the Opinion Stage site.</a>
+Opinion Stage offers web sites a highly engaging online polling / onling voting solution. For more details on Opinion Stage's onling polling solution, visit <a href="http://www.opinionstage.com?o=wp35e8" target="_blank">the Opinion Stage site.</a>
 
 == Installation ==
 
@@ -78,7 +78,7 @@ Yes, we plan to add the option to debate the poll. Users will be able to add a t
 
 Follow these steps:
 
-1. Create a new poll from <a href="http://www.opinionstage.com?o=wp" target="_blank">here</a>
+1. Create a new poll from <a href="http://www.opinionstage.com?o=wp35e8" target="_blank">here</a>
 2. After the poll was created, from the dashboard, click "Add to Website" link and copy the WordPress poll code ( e.g. [socialpoll id="119543"] )
 3. Paste the poll code you copied into the blog post/page/section
 
