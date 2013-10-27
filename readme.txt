@@ -104,6 +104,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 5.5.0 =
+  *Improvements & fixes on poll reporting statistics
+  *Improvements & fixes on poll core flows
  = Version 5.4.0 =
   *Added to the poll results screen the following poll stats: poll engagement stats, poll social stats & poll traffic stats
  = Version 5.3.0 =
