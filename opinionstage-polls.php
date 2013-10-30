@@ -11,7 +11,7 @@ Author URI: http://www.opinionstage.com
 /* --- Static initializer for Wordpress hooks --- */
 
 define('OPINIONSTAGE_SERVER_BASE', "www.opinionstage.com"); /* Don't include the protocol, added dynamically */
-define('OPINIONSTAGE_WIDGET_VERSION', '5.5.0');
+define('OPINIONSTAGE_WIDGET_VERSION', '5.6.0');
 define('OPINIONSTAGE_WIDGET_PLUGIN_NAME', 'Social Polls by OpinionStage');
 define('OPINIONSTAGE_WIDGET_API_KEY', 'wp35e8');
 define('OPINIONSTAGE_WIDGET_SHORTCODE', 'socialpoll');
