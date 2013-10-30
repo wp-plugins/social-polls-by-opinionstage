@@ -34,13 +34,20 @@ function opinionstage_create_embed_code($id) {
     // Only present if id is available 
     if (isset($id) && !empty($id)) {        		
 		// Load embed code from the cache if possible
-		if ( false === ( $code = get_transient( 'embed_code' . $id) ) ) {
-			extract(opinionstage_get_contents("http://".OPINIONSTAGE_SERVER_BASE."/api/debates/" . $id . "/embed_code.json"));
+		$is_homepage = is_home();
+		$transient_name = 'embed_code' . $id . '_' . ($is_homepage ? "1" : "0");
+		if ( false === ( $code = get_transient($transient_name) ) ) {
+			$embed_code_url = "http://".OPINIONSTAGE_SERVER_BASE."/api/debates/" . $id . "/embed_code.json";
+			if ($is_homepage) {
+				$embed_code_url .= "?h=1";
+			}
+		
+			extract(opinionstage_get_contents($embed_code_url));
 			$data = json_decode($raw_data);
 			if ($success) {
 				$code = $data->{'code'};			
 				// Set the embed code to be cached for an hour
-				set_transient( 'embed_code' . $id, $code, 3600);
+				set_transient($transient_name, $code, 3600);
 			}
 		}
     }
