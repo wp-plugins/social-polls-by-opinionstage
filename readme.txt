@@ -46,13 +46,13 @@ Opinion Stage offers web sites a highly engaging online polling / onling voting 
 == Frequently Asked Questions ==
 
 
-= What sets Opinion Stage polls apart from other polling solutions? =
+= What sets Opinion Stage online polls apart from other online polling solutions? =
 
-Opinion Stage polls are social polls which means that social network identities are used for polling the participants. This makes the poll more engaging than the typical poll, letting users discover who supports what and how each user voted in other polls. You can also follow users and then filter the poll results by the people you follow. Using social polls improves the distribution of the poll in social networks, allows gathering contact, demographic & social statistics from the poll participants. Lastly, social polls also work very well for elections & competitions.
+Opinion Stage online polls are social polls which means that social network identities are used for polling the participants. This makes the poll more engaging than the typical online poll, letting users discover who supports what and how each user voted in other polls. You can also follow users and then filter the poll results by the people you follow. Using social polls improves the distribution of the poll in social networks, allows gathering contact, demographic & social statistics from the poll participants. Lastly, social polls also work very well for elections & competitions.
 
 = Do you require users to identify by logging-in before voting? =
 
-When creating the polls you can determine if a social profile is required, if it is optional or if it is not required at all for voting. Opinion Stage polls currently support Facebook & Twitter login, and will include additional poll login options in the future. 
+When creating the polls you can determine if a social profile is required, if it is optional or if it is not required at all for voting. Opinion Stage online polls currently support Facebook, Twitter & Google login, and will include additional poll login options in the future. 
  
 = Do you support anonymous voting? =
 
@@ -62,11 +62,11 @@ When using a social profile to participate in the poll, you can hide your vote s
 
 Users can either share the poll question from the social (e.g. Facebook & Twitter) sharing buttons that are displayed on the top of the poll or by sharing the social sharing dialog that is displayed automatically after they vote in the poll. Opinion Stage never shares anything on the users' behalf without getting explicit permission for it.
 
-= What are the benifits of using social polls? =
+= What are the benefits of using social polls? =
 
 Using social polls offer the following main benefits: (1) improves user engagement on the site (2) drives traffic from social networks to the site (3) allow you to discover the the person behind the opinion (4) serves as a great tool for running elections & contests (5) allow you to gather contact, social & demographic information from the poll participants
 
-= What types of polls do you support? =
+= What types of online polls do you support? =
 
 We support both regular multiple-sided polls and a special head-to-head poll flavor (for the 2-sided polls)
 
@@ -104,22 +104,24 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+= Version 5.7.0 =
+  * Added the option to block repeat voting in polls by IP
  = Version 5.6.0 =
-  *Improvements & fixes on poll studio
+  * Improvements & fixes on poll studio
  = Version 5.5.0 =
-  *Improvements & fixes on poll reporting statistics
-  *Improvements & fixes on poll core flows
+  * Improvements & fixes on poll reporting statistics
+  * Improvements & fixes on poll core flows
  = Version 5.4.0 =
-  *Added to the poll results screen the following poll stats: poll engagement stats, poll social stats & poll traffic stats
+  * Added to the poll results screen the following poll stats: poll engagement stats, poll social stats & poll traffic stats
  = Version 5.3.0 =
-  *Add a clone function that allows to easily create multiple polls from the same template
-  *Add the option to schedule when the poll will be closed
+  * Add a clone function that allows to easily create multiple polls from the same template
+  * Add the option to schedule when the poll will be closed
  = Version 5.2.0 =
-  *Revamp of the poll social sharing settings
-  *revamp of add poll to website screen
+  * Revamp of the poll social sharing settings
+  * revamp of add poll to website screen
  = Version 5.1.0 =
-  *Add Facebook comments to polls added to Facebook pages
-  *Add the option to preview the poll in different widths
+  * Add Facebook comments to polls added to Facebook pages
+  * Add the option to preview the poll in different widths
  = Version 5.0.0 =
   * Improvements to poll style studio
   * Added option to configure head to head polls not to show results before voting
