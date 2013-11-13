@@ -104,7 +104,7 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
- = Version 5.7.1 =
+ = Version 5.8.0 =
   * Added time filter to poll results dashboard
   * New design for on site poll page
   * Various improvments & fixes on poll results dashboard
