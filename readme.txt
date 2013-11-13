@@ -104,7 +104,11 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
-= Version 5.7.0 =
+ = Version 5.7.1 =
+  * Added time filter to poll results dashboard
+  * New design for on site poll page
+  * Various improvments & fixes on poll results dashboard
+ = Version 5.7.0 =
   * Added the option to block repeat voting in polls by IP
  = Version 5.6.0 =
   * Improvements & fixes on poll studio
