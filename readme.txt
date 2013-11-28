@@ -104,7 +104,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
-== Changelog == 
+ = Version 6.0.0 =
+  * Added the option to login to Opinion Stage with a email/user-name and password combination
  = Version 5.9.0 =
   * Added geographic location filter to poll results dashboard
  = Version 5.8.0 =
