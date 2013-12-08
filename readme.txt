@@ -104,6 +104,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 6.1.0 =
+  * New dashboard and site header
+  * Poll was translated to the following languages - Swedish, Turkish, Chinese, Japanese, Korean
  = Version 6.0.0 =
   * Added the option to login to Opinion Stage with a email/user-name and password combination
  = Version 5.9.0 =
