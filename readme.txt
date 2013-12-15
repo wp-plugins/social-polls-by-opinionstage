@@ -104,6 +104,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 6.2.0 =
+  * New Poll navigation bar
+  * New languages - Dutch, Albanian, Lithuanian
  = Version 6.1.0 =
   * New dashboard and site header
   * Poll was translated to the following languages - Swedish, Turkish, Chinese, Japanese, Korean
@@ -114,7 +117,7 @@ N/A
  = Version 5.8.0 =
   * Added time filter to poll results dashboard
   * New design for on site poll page
-  * Various improvments & fixes on poll results dashboard
+  * Various improvements & fixes on poll results dashboard
  = Version 5.7.0 =
   * Added the option to block repeat voting in polls by IP
  = Version 5.6.0 =
