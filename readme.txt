@@ -18,9 +18,9 @@ Using Opinion Stage’s polling solution, you can discover opinions & people, im
 <br>
 <br>
 Get up & going in minutes.
-<BR>
-https://www.youtube.com/watch?v=P7xKNlWbk0s
-<BR>
+<br>
+http://www.youtube.com/watch?v=P7xKNlWbk0s
+<br>
 
 = Main Poll Features: =
 
