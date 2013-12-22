@@ -7,27 +7,28 @@ Requires at least: 2.8
 Tested up to: 3.6
 Stable tag: trunk
  
-Add a powerful & easy-to-use social polling solution to your WordPress site.
+Add a powerful & easy-to-use social polling solution to your site.
 
 == Description ==
 
-The Opinion Stage online polling WordPress plug-in allows you to easily add social polls (or standard polls) to your website or Facebook page.
+The Opinion Stage polling WordPress plug-in allows you to easily add social polls (or standard polls) to your website or Facebook page.
 <br>
 <br>
-Using Opinion Stage’s online polling / online voting solution, sites can improve engagement, drive traffic from social networks to the polls and site, discover contact, demographic and social attributes of the poll participants, and more. 
+Using Opinion Stage’s polling solution, you can discover opinions & people, improve engagement your site, drive traffic from social networks, research results using social & demographic filters and more.
 <br>
 <br>
-The online poll WordPress plug-in is free and is very easy to install and use.
+Get up & going in minutes.
+<BR>
+https://www.youtube.com/watch?v=P7xKNlWbk0s
+<BR>
 
 = Main Poll Features: =
 
  * Manage all your polls from one dashboard	
  * Poll your site visitors using their social network identities or anonymously
  * View the full poll participant list social profiles
- * Follow poll participants to discover how they voted in different polls
  * Filter the poll participant list according to side votes
- * Filter the poll results based on social filters such as users you follow (e.g Facebook friends)
- * Filter the poll results based on demographic filters such as gender
+ * Filter the poll results using social & demographic filters such as social network belonging, gender, location, time-frame and more
  * Get the poll question & poll votes shared in social networks, driving social traffic to your poll and site
  * Set the details of the social sharing (e.g. text, image & link displayed in the Facebook share) to optimize the share for improved visibility and click rates
  * Customize the poll feature to match your needs (e.g. show/don't show number of votes, show results before / after voting, order sides by most votes or as configured, etc) 
@@ -36,7 +37,7 @@ The online poll WordPress plug-in is free and is very easy to install and use.
 
 = About Opinion Stage: =
 
-Opinion Stage offers web sites a highly engaging online polling / onling voting solution. For more details on Opinion Stage's onling polling solution, visit <a href="http://www.opinionstage.com?o=wp35e8" target="_blank">the Opinion Stage site.</a>
+Opinion Stage offers web sites a highly engaging online polling solution. For more details on Opinion Stage's polling solutions, visit <a href="http://www.opinionstage.com?o=wp35e8" target="_blank">the Opinion Stage site.</a>
 
 == Installation ==
 
@@ -104,6 +105,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 6.3.0 =
+  * New graphs for the new reports page
+  * New languages - Romanian, Polish, Indonesian, Danish
  = Version 6.2.0 =
   * New Poll navigation bar
   * New languages - Dutch, Albanian, Lithuanian

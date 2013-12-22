@@ -140,6 +140,7 @@ function opinionstage_add_poll_page() {
 		  <ul class="os_links_list">			
 			<li><a href="http://blog.opinionstage.com/wordpress-poll-how-to-add-polls-to-wordpress-sites/?o=wp35e8" target="_blank">Help</a></li>					  
 			<li><?php echo opinionstage_create_link('Showcase', 'showcase', ''); ?></li>
+			<li><a href="https://opinionstage.zendesk.com/anonymous_requests/new" target="_blank">Contact Us</a></li>					  
 		  </ul>	  
 	  </div>  
   </div>

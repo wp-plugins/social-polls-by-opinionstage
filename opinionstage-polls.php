@@ -3,7 +3,7 @@
 Plugin Name: Social Polls by OpinionStage
 Plugin URI: http://www.opinionstage.com
 Description: Adds a highly engaging social polling system to your blog. You can easily add a social poll to your blog post/page by clicking the social poll icon in the WordPress post/page text editor.
-Version: 6.2.0
+Version: 6.3.0
 Author: OpinionStage.com
 Author URI: http://www.opinionstage.com
 */
@@ -11,7 +11,7 @@ Author URI: http://www.opinionstage.com
 /* --- Static initializer for Wordpress hooks --- */
 
 define('OPINIONSTAGE_SERVER_BASE', "www.opinionstage.com"); /* Don't include the protocol, added dynamically */
-define('OPINIONSTAGE_WIDGET_VERSION', '6.2.0');
+define('OPINIONSTAGE_WIDGET_VERSION', '6.3.0');
 define('OPINIONSTAGE_WIDGET_PLUGIN_NAME', 'Social Polls by OpinionStage');
 define('OPINIONSTAGE_WIDGET_API_KEY', 'wp35e8');
 define('OPINIONSTAGE_WIDGET_SHORTCODE', 'socialpoll');
