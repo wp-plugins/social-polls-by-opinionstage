@@ -4,7 +4,7 @@ Donate link:
 Tags: poll, polls, polling, vote, voting, debate, survey, social, opinionstage, opinion stage 
 
 Requires at least: 2.8
-Tested up to: 3.6
+Tested up to: 3.8
 Stable tag: trunk
  
 Add a powerful & easy-to-use social polling solution to your site.
@@ -20,7 +20,7 @@ Using Opinion Stage’s polling solution, you can discover opinions & people, im
 Get up & going in minutes.
 <br>
 http://www.youtube.com/watch?v=P7xKNlWbk0s
-<br>
+
 
 = Main Poll Features: =
 
@@ -35,6 +35,17 @@ http://www.youtube.com/watch?v=P7xKNlWbk0s
  * Customize the poll's size, font, colour yourself or select from pre-defined poll styles and poll sizes.
  * ... much more!
 
+ = Main Poll Benefits: =
+
+ * Discover opinions & people - discover opinions & the people behind them. You can view the social profiles of the public voters and learn about the opinions of your audience using aggregated poll reports
+ * Engage your audience - opinion polls are one of the most engaging types of content. Opinion Stage’s social layer further increases the poll engagement by allowing voters to discover who the participants are, view the poll results by various filters and more
+ * Drive traffic from social networks to your poll and site - after voting, participants are automatically prompted to share their votes in the various social networks, driving new traffic from social networks to your site
+ * Research the poll results and gain insights - Filter poll results by demographic & social attributes such as gender, location, social network belonging, time frame, and more. Learn how effective your polls are by discovering their level of engagement, how many of the poll votes are shared and how much traffic the polls generate
+ * Run profile based competitions & elections - conducting competitions & elections using social profiles, is a great way to achieve more authentic voting. Competitions become much more appealing, and tend to generate many social shares that drive traffic from social networks to your site
+ * Design polls that fit to your site - opinion Stage includes an online poll design studio that lets you design polls that perfectly fit into your site. You can set the poll size, font, colors, logo and more
+ * Polls works seamlessly on all platforms - Opinion Stage uses responsive design techniques to fully support all platforms & screen sizes, including desktops, tablets and mobile devices. Reach your target audience wherever they are
+ * Easy content creation - creating polls is an easy way to produce engaging and relevant content. Deploy your first polls in minutes and easily manage all your polls from a simple and intuitive dashboard
+ 
 = About Opinion Stage: =
 
 Opinion Stage offers web sites a highly engaging online polling solution. For more details on Opinion Stage's polling solutions, visit <a href="http://www.opinionstage.com?o=wp35e8" target="_blank">the Opinion Stage site.</a>
@@ -105,6 +116,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 6.4.0 =
+  * New poll container
+  * Improvements to the poll optimization dashboard
  = Version 6.3.0 =
   * New graphs for the new reports page
   * New languages - Romanian, Polish, Indonesian, Danish
