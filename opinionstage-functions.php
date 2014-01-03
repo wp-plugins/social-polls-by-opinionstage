@@ -135,6 +135,7 @@ function opinionstage_add_poll_page() {
 		  <ul class="os_links_list">
 			<li><?php echo opinionstage_create_link('Create a Poll', 'new_poll', ''); ?></li>
 			<li><?php echo opinionstage_create_link('Manage Your Polls', 'dashboard', ''); ?></li>
+			<li><?php echo opinionstage_create_link('Manage Your Containers', 'dashboard?tab=containers', ''); ?></li>			
 		  </ul>
 		  <h2>Help</h2>
 		  <ul class="os_links_list">			
