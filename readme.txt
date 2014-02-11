@@ -48,7 +48,7 @@ http://www.youtube.com/watch?v=P7xKNlWbk0s
  
 = About Opinion Stage: =
 
-Opinion Stage offers web sites a highly engaging online polling solution. For more details on Opinion Stage's polling solutions, visit <a href="http://www.opinionstage.com?o=wp35e8" target="_blank">the Opinion Stage site.</a>
+Opinion Stage offers web sites a highly engaging opinion polling solution. For more details on Opinion Stage's polling solutions, visit <a href="http://www.opinionstage.com?o=wp35e8" target="_blank">the Opinion Stage site.</a>
 
 == Installation ==
 
@@ -116,10 +116,10 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
-  = Version 6.7.0 =
+ = Version 6.7.0 =
   * Added Czech & Polish languages
   * Add poll images via URL 
-  = Version 6.6.0 =
+ = Version 6.6.0 =
   * Improve poll login screen in mobile
   * Fixes for poll container 
  = Version 6.5.0 =
