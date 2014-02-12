@@ -116,8 +116,12 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 6.8.0 =
+  * Fix issue with Mobile voting
+  * Fix for iframe embed of poll
+  * Fix for uploading images from computer 
  = Version 6.7.0 =
-  * Added Czech & Polish languages
+  * Added Czech language & fix for Polish
   * Add poll images via URL 
  = Version 6.6.0 =
   * Improve poll login screen in mobile
