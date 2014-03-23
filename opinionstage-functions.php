@@ -155,16 +155,6 @@ function opinionstage_load_scripts() {
 	wp_enqueue_script( 'ospolls', plugins_url(OPINIONSTAGE_WIDGET_UNIQUE_ID.'/opinionstage_plugin.js'), array( 'jquery', 'thickbox' ));
 }
 
-function mytheme_tinymce_config( $init ) {
-	$valid_shortcode = OPINIONSTAGE_WIDGET_SHORTCODE;
-	if ( isset( $init['extended_valid_elements'] ) ) {
-		$init['extended_valid_elements'] .= ',' . $valid_shortcode;
-	} else {
-		$init['extended_valid_elements'] = $valid_shortcode;
-	}
-	return $init;
-}
-
 /**
  * The popup window in the post/page edit/new page
  */

@@ -116,6 +116,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 7.0.0 =
+  * Fixed potential collisions with other plugins
  = Version 6.9.0 =
   * First version of Poll Sets
   * First version of redirect after poll vote
