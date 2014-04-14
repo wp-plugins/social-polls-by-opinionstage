@@ -116,6 +116,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 7.2.0 =
+  * Add external integration with 3rd parties via XML mechanism
  = Version 7.1.0 =
   * Support collecting emails from poll voters
  = Version 7.0.0 =
