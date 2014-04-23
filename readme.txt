@@ -4,7 +4,7 @@ Donate link:
 Tags: poll, polls, polling, vote, voting, debate, survey, social, opinionstage, opinion stage 
 
 Requires at least: 2.8
-Tested up to: 3.8.1
+Tested up to: 3.9
 Stable tag: trunk
  
 Add a powerful & easy-to-use social polling solution to your site.
@@ -116,8 +116,10 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 7.3.0 =
+  * Resolved 2 issues with polls on mobile
  = Version 7.2.0 =
-  * Add external integration with 3rd parties via XML mechanism
+  * Add external integration with 3rd parties via API/XML mechanism
  = Version 7.1.0 =
   * Support collecting emails from poll voters
  = Version 7.0.0 =
