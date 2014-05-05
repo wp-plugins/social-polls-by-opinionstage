@@ -116,6 +116,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 7.4.0 =
+  * Poll performance optimizations
  = Version 7.3.0 =
   * Resolved 2 issues with polls on mobile
  = Version 7.2.0 =
