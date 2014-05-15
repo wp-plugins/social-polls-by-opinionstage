@@ -118,7 +118,7 @@ function opinionstage_poll_footer_admin() {
 function opinionstage_poll_menu() {
 	if (function_exists('add_menu_page')) {
 		add_menu_page(__('Add Polls', OPINIONSTAGE_WIDGET_UNIQUE_ID), __('Social Polls', OPINIONSTAGE_WIDGET_UNIQUE_ID), 'edit_posts', OPINIONSTAGE_WIDGET_UNIQUE_LOCATION, 'opinionstage_add_poll_page', 
-			plugins_url(OPINIONSTAGE_WIDGET_UNIQUE_ID.'/images/os.png'));
+			plugins_url(OPINIONSTAGE_WIDGET_UNIQUE_ID.'/images/os.png'), '25.234323221');
 	}
 }
 
