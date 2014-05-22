@@ -11,10 +11,10 @@ Add a powerful & easy-to-use social polling solution to your site.
 
 == Description ==
 
-The Opinion Stage polling WordPress plug-in allows you to easily add social polls (or standard polls) to your website or Facebook page.
+The Opinion Stage WordPress poll plug-in allows you to easily add social polls (or standard polls) to your website or Facebook page.
 <br>
 <br>
-Using Opinion Stage’s polling solution, you can discover opinions & people, improve engagement on your site, drive traffic from social networks, research results using social & demographic filters and more.
+Using Opinion Stage’s WordPress polls solution, you can discover opinions & people, improve engagement on your site, drive traffic from social networks, research results using social & demographic filters, generate revenue and more.
 <br>
 <br>
 Get up & going in minutes.
@@ -24,7 +24,7 @@ http://www.youtube.com/watch?v=P7xKNlWbk0s
 
 = Main Poll Features: =
 
- * Manage all your polls from one dashboard	
+ * Manage all your WordPress polls from one dashboard	
  * Poll your site visitors using their social network identities or anonymously
  * View the full poll participant list social profiles
  * Filter the poll participant list according to side votes
@@ -46,7 +46,11 @@ http://www.youtube.com/watch?v=P7xKNlWbk0s
  * Polls works seamlessly on all platforms - Opinion Stage uses responsive design techniques to fully support all platforms & screen sizes, including desktops, tablets and mobile devices. Reach your target audience wherever they are
  * Easy content creation - creating polls is an easy way to produce engaging and relevant content. Deploy your first polls in minutes and easily manage all your polls from a simple and intuitive dashboard
  
-= About Opinion Stage: =
+ = Language support = 
+
+Opinion Stage supports over 30 languages, missing a language? Let us know!
+
+ = About Opinion Stage: =
 
 Opinion Stage offers web sites a highly engaging opinion polling solution. For more details on Opinion Stage's polling solutions, visit <a href="http://www.opinionstage.com?o=wp35e8" target="_blank">the Opinion Stage site.</a>
 
