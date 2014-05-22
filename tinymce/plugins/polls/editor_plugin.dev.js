@@ -9,7 +9,7 @@
 					var width = jQuery(window).width(), H = jQuery(window).height(), W = ( 720 < width ) ? 720 : width;
 					W = W - 80;
 					H = H - 84;
-					tb_show( 'Insert Poll', '#TB_inline?width=' + W + '&height=' + H + '&inlineId=opinionstage-insert-poll-form' );
+					tb_show( 'Insert Poll / Set', '#TB_inline?width=' + W + '&height=' + H + '&inlineId=opinionstage-insert-poll-form' );
 				},				
                 image: b + "/img/os.png"
             });

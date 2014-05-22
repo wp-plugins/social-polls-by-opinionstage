@@ -116,6 +116,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 7.6.0 =
+  * Added the ability to insert a shortcode of a set of polls
+  * Added a widget for a container and for a set of polls
  = Version 7.5.0 =
   * Created a widget for easily adding polls to site
  = Version 7.4.0 =

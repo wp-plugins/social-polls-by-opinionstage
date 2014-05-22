@@ -13,10 +13,10 @@
  *
  */
 function opinionstage_add_poll($atts) {
-	extract(shortcode_atts(array('id' => 0), $atts));
+	extract(shortcode_atts(array('id' => 0, 'type' => 'poll'), $atts));
 	if(!is_feed()) {
 		$id = intval($id);
-		return opinionstage_create_embed_code($id);
+		return opinionstage_create_embed_code($id, $type);
 	} else {
 		return __('Note: There is a poll embedded within this post, please visit the site to participate in this post\'s poll.', OPINIONSTAGE_WIDGET_UNIQUE_ID);
 	}
@@ -29,15 +29,23 @@ function opinionstage_add_poll($atts) {
  * Arguments:
  * @param  id - Id of the poll
  */
-function opinionstage_create_embed_code($id) {
+function opinionstage_create_embed_code($id, $type) {
     
     // Only present if id is available 
     if (isset($id) && !empty($id)) {        		
 		// Load embed code from the cache if possible
 		$is_homepage = is_home();
-		$transient_name = 'embed_code' . $id . '_' . ($is_homepage ? "1" : "0");
-		if ( false === ( $code = get_transient($transient_name) ) ) {
-			$embed_code_url = "http://".OPINIONSTAGE_SERVER_BASE."/api/debates/" . $id . "/embed_code.json";
+		$transient_name = 'embed_code' . $id . '_' . $type . '_' . ($is_homepage ? "1" : "0");
+		$code = get_transient($transient_name);
+		if ( false === $code || '' === $code ) {
+			if ($type == 'set') {
+				$embed_code_url = "http://".OPINIONSTAGE_SERVER_BASE."/api/sets/" . $id . "/embed_code.json";
+			} else if ($type == 'container') {
+				$embed_code_url = "http://".OPINIONSTAGE_SERVER_BASE."/api/containers/" . $id . "/embed_code.json";
+			} else {
+				$embed_code_url = "http://".OPINIONSTAGE_SERVER_BASE."/api/debates/" . $id . "/embed_code.json";
+			}
+			
 			if ($is_homepage) {
 				$embed_code_url .= "?h=1";
 			}
@@ -134,8 +142,10 @@ function opinionstage_add_poll_page() {
 		  <h2>Actions</h2>
 		  <ul class="os_links_list">
 			<li><?php echo opinionstage_create_link('Create a Poll', 'new_poll', ''); ?></li>
-			<li><?php echo opinionstage_create_link('Manage Polls', 'dashboard', ''); ?></li>
-			<li><a href="http://www.opinionstage.com/dashboard?tab=containers" target="_blank">Manage Containers</a></li>
+			<li><?php echo opinionstage_create_link('Create a Set', 'sets/new', ''); ?></li>
+			<li><?php echo opinionstage_create_link('View Polls', 'dashboard', ''); ?></li>
+			<li><?php echo opinionstage_create_link('View Sets', 'dashboard', 'tab=sets'); ?></li>			
+			<li><?php echo opinionstage_create_link('View Containers', 'dashboard', 'tab=containers'); ?></li>			
 		  </ul>
 		  <h2>Help</h2>
 		  <ul class="os_links_list">			
@@ -152,7 +162,7 @@ function opinionstage_add_poll_page() {
  * Load the js script
  */
 function opinionstage_load_scripts() {
-	wp_enqueue_script( 'ospolls', plugins_url(OPINIONSTAGE_WIDGET_UNIQUE_ID.'/opinionstage_plugin.js'), array( 'jquery', 'thickbox' ));
+	wp_enqueue_script( 'ospolls', plugins_url(OPINIONSTAGE_WIDGET_UNIQUE_ID.'/opinionstage_plugin.js'), array( 'jquery', 'thickbox' ), '3' );
 }
 
 /**
@@ -162,18 +172,68 @@ function opinionstage_add_poll_popup() {
 	?>
 	<div id="opinionstage-insert-poll-form" style="display:none;">
       <div id="content">
-		<h1><strong>Insert a Poll</strong></h1>
-		<h3><strong>Enter Poll ID (e.g. 4567):</strong></h3>
-		<p><input type="text" name="poll-id" id="opinionstage-poll-id" value="" /></p>
-		<p class="submit">
-		  <input type="button" id="opinionstage-submit" class="button-primary" value="Insert Poll" name="submit" />
+		<h3><strong>Type:</strong></h3>
+		<p>
+			<select style="width: 100%; max-width: 300px; font-size: 20px; height: 40px; line-height: 40px;" id="opinionstage-type">
+				<option value="poll">Insert a Poll</option>
+				<option value="set">Insert a Set</option>
+			</select>
 		</p>
-		<p><strong>Haven't created a poll yet?</strong></br></br>
-			<?php echo opinionstage_create_link('Create a new poll', 'new_poll', ''); ?>
-		</p>
-		<p><strong>Don't know the poll ID?</strong></br></br>
-			<?php echo opinionstage_create_link('Find ID of an existing poll', 'dashboard', ''); ?>
-		</p>
+		<style type="text/css">
+			.pollWrp p, .setWrp p { padding: 1px 0 !important; }
+		</style>
+		<script type="text/javascript">
+			jQuery(function ($)
+			{
+				var $pollWrp = $(".pollWrp");
+				var $setWrp = $(".setWrp");
+				$("#opinionstage-type").change(function ()
+				{
+					var $this = $(this);
+					var val = $this.val();
+					if (val == "poll")
+					{
+						$setWrp.fadeOut(0, function ()
+						{
+							$pollWrp.fadeIn("fast");
+						});
+					}
+					else if (val == "set")
+					{
+						$pollWrp.fadeOut(0, function ()
+						{
+							$setWrp.fadeIn("fast");
+						});					
+					}
+				}).trigger("change");
+			});
+		</script>
+		<div class="pollWrp" style="display: none;">
+			<h3><strong>Enter Poll ID (e.g. 2195036):</strong></h3>
+			<p><input type="text" name="poll-id" id="opinionstage-poll-id" value="" /></p>
+			<p class="submit">
+			  <input type="button" class="opinionstage-submit button-primary" value="Insert Poll" name="submit" />
+			</p>
+			<p><strong>Haven't created a poll yet?</strong></br></br>
+				<?php echo opinionstage_create_link('Create a new poll', 'new_poll', ''); ?>
+			</p>
+			<p><strong>Don't know the poll ID?</strong></br></br>
+				<?php echo opinionstage_create_link('Locate ID of an existing poll', 'dashboard', ''); ?>
+			</p>
+		</div>
+		<div class="setWrp" style="display: none;">
+			<h3><strong>Enter Set ID (e.g. 2152089):</strong></h3>
+			<p><input type="text" name="set-id" id="opinionstage-set-id" value="" /></p>
+			<p class="submit">
+			  <input type="button" class="opinionstage-submit button-primary" value="Insert Set" name="submit" />
+			</p>
+			<p><strong>Haven't created a set yet?</strong></br></br>
+				<?php echo opinionstage_create_link('Create a new set', 'sets/new', ''); ?>
+			</p>
+			<p><strong>Don't know the set ID?</strong></br></br>
+				<?php echo opinionstage_create_link('Locate ID of an existing set', 'dashboard', 'tab=sets', array()); ?>
+			</p>
+		</div>
 	  </div>
 	</div>  
 	<?php
@@ -184,10 +244,9 @@ function opinionstage_add_poll_popup() {
  */
 function opinionstage_create_link($caption, $page, $params = "", $options = array()) {
 	$style = empty($options['style']) ? '' : $options['style'];
-	$new_page = empty($options['new_page']) ? true : $options['new_page'];	
+	$new_page = empty($options['new_page']) ? true : $options['new_page'];
 	$params_prefix = empty($params) ? "" : "&";	
-	$link = "http://".OPINIONSTAGE_SERVER_BASE."/".$page."?o=".OPINIONSTAGE_WIDGET_API_KEY.$params_prefix.$params;
-	
+	$link = "http://".OPINIONSTAGE_SERVER_BASE."/".$page."?" . "o=".OPINIONSTAGE_WIDGET_API_KEY.$params_prefix.$params;
 	return "<a href=\"".$link."\"".($new_page ? " target='_blank'" : "")." style=".$style.">".$caption."</a>";
 }
 
