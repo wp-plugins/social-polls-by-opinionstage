@@ -62,10 +62,10 @@
 					<p><?php echo opinionstage_create_link('Locate the Poll ID', 'dashboard', ''); ?></p>
 				</div>
 				<div class="setWrp" style="display: none;">
-					<p><?php echo opinionstage_create_link('Locate the Set ID', 'dashboard', '', array(), 'sets'); ?></p>
+					<p><?php echo opinionstage_create_link('Locate the Set ID', 'dashboard', 'tab=sets'); ?></p>
 				</div>
 				<div class="containerWrp" style="display: none;">
-					<p><?php echo opinionstage_create_link('Locate the Container ID', 'dashboard', '', array(), 'containers'); ?></p>
+					<p><?php echo opinionstage_create_link('Locate the Container ID', 'dashboard', 'tab=containers'); ?></p>
 				</div>
 				
 				<script type="text/javascript">
