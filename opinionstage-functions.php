@@ -23,7 +23,7 @@ function opinionstage_add_poll($atts) {
 }
 
 /**
- * Create the The iframe HTML Tag according to the given paramters.
+ * Create the The iframe HTML Tag according to the given parameters.
  * Either get the embed code or embeds it directly in case 
  *
  * Arguments:
@@ -142,8 +142,8 @@ function opinionstage_add_poll_page() {
 		  <h2>Actions</h2>
 		  <ul class="os_links_list">
 			<li><?php echo opinionstage_create_link('Create a Poll', 'new_poll', ''); ?></li>
-			<li><?php echo opinionstage_create_link('Create a Set', 'sets/new', ''); ?></li>
 			<li><?php echo opinionstage_create_link('View Polls', 'dashboard', ''); ?></li>
+			<li><?php echo opinionstage_create_link('Create a Set', 'sets/new', ''); ?></li>
 			<li><?php echo opinionstage_create_link('View Sets', 'dashboard', 'tab=sets'); ?></li>			
 			<li><?php echo opinionstage_create_link('View Containers', 'dashboard', 'tab=containers'); ?></li>			
 		  </ul>
