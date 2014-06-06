@@ -22,7 +22,7 @@
         },
         getInfo: function () {
             return {
-                longname: "Social-Polls-by-OpinionStage",
+                longname: "Polls-by-OpinionStage",
                 author: "Opinion Stage",
                 authorurl: "http://www.opinionstage.com",
                 infourl: "http://www.opinionstage.com/about",

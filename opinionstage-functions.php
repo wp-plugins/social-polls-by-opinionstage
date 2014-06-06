@@ -104,8 +104,8 @@ function opinionstage_poll_footer_admin() {
 	echo '<script type="text/javascript">'."\n";
 	echo '/* <![CDATA[ */'."\n";
 	echo "\t".'var opsPollBtn = {'."\n";
-	echo "\t\t".'poll: "'.esc_js(__('social poll', OPINIONSTAGE_WIDGET_UNIQUE_ID)).'",'."\n";
-	echo "\t\t".'insert_poll: "'.esc_js(__('Insert social poll', OPINIONSTAGE_WIDGET_UNIQUE_ID)).'"'."\n";
+	echo "\t\t".'poll: "'.esc_js(__('poll', OPINIONSTAGE_WIDGET_UNIQUE_ID)).'",'."\n";
+	echo "\t\t".'insert_poll: "'.esc_js(__('Insert poll', OPINIONSTAGE_WIDGET_UNIQUE_ID)).'"'."\n";
 	echo "\t".'};'."\n";
 	echo "\t".'if(document.getElementById("ed_toolbar")){'."\n";
 	echo "\t\t".'edButtons[edButtons.length] = new edButton("ed_o_poll",opsPollBtn.poll, "", "","");'."\n";
@@ -125,7 +125,7 @@ function opinionstage_poll_footer_admin() {
  */
 function opinionstage_poll_menu() {
 	if (function_exists('add_menu_page')) {
-		add_menu_page(__('Add Polls', OPINIONSTAGE_WIDGET_UNIQUE_ID), __('Social Polls', OPINIONSTAGE_WIDGET_UNIQUE_ID), 'edit_posts', OPINIONSTAGE_WIDGET_UNIQUE_LOCATION, 'opinionstage_add_poll_page', 
+		add_menu_page(__('Add Polls', OPINIONSTAGE_WIDGET_UNIQUE_ID), __('Polls', OPINIONSTAGE_WIDGET_UNIQUE_ID), 'edit_posts', OPINIONSTAGE_WIDGET_UNIQUE_LOCATION, 'opinionstage_add_poll_page', 
 			plugins_url(OPINIONSTAGE_WIDGET_UNIQUE_ID.'/images/os.png'), '25.234323221');
 	}
 }

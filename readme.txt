@@ -1,4 +1,4 @@
-﻿=== Social Polls by OpinionStage ===
+﻿=== Polls by OpinionStage ===
 Contributors: OpinionStage.com
 Donate link: 
 Tags: poll, polls, polling, vote, voting, debate, survey, social, opinionstage, opinion stage 
@@ -122,6 +122,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 7.8.0 =
+  * Renamed plugin to better reflect the platform
  = Version 7.7.0 =
   * Fixed 2 poll display issues
  = Version 7.6.0 =
