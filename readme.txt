@@ -122,6 +122,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 7.9.0 =
+  * Resolved paypal integration issues
+  * Resolved facebook page integration issues
  = Version 7.8.0 =
   * Renamed plugin to better reflect the platform
  = Version 7.7.0 =
