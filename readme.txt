@@ -12,8 +12,6 @@ Add a powerful & easy-to-use social polling solution to your site.
 == Description ==
 
 The Opinion Stage WordPress poll plug-in allows you to easily add social (or standard) polls to your website or Facebook page.
-<br>
-<br>
 
 = Poll Examples: =
 
