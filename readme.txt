@@ -11,19 +11,26 @@ Add a powerful & easy-to-use social polling solution to your site.
 
 == Description ==
 
-The Opinion Stage WordPress poll plug-in allows you to easily add social polls (or standard polls) to your website or Facebook page.
+The Opinion Stage WordPress poll plug-in allows you to easily add social (or standard) polls to your website or Facebook page.
 <br>
 <br>
+
+= Poll Examples: =
+
 For examples, checkout the <a href="http://www.opinionstage.com/showcase?o=wp35e8" target="_blank">Poll Showcase.</a>
+
+= Why Opinion Stage? =
+
+ * Discover opinions
+ * Boost engagement - increase time-on-site, page views & shares
+ * Drive traffic from social networks
+ * Run contests and sweepstakes
+ * Generate revenue by integrating ads in the polls
+ * Gather contact info(emails, social profiles, etc)
+ * Get up& going in minutes
 <br>
-<br>
-Using Opinion Stage’s WordPress polls solution, you can discover opinions & people, improve engagement on your site, drive traffic from social networks, research results using social & demographic filters, generate revenue and more.
-<br>
-<br>
-Get up & going in minutes.
 <br>
 http://www.youtube.com/watch?v=P7xKNlWbk0s
-
 
 = Main Poll Features: =
 
@@ -125,6 +132,10 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 8.1.0 =
+  * Poll discovery - first version
+  * Poll sets improvements
+  * Poll performance improvements
  = Version 8.0.0 =
   * Added an account report dashboard
  = Version 7.9.0 =
