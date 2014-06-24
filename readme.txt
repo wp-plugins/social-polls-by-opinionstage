@@ -26,8 +26,9 @@ For examples, checkout the <a href="http://www.opinionstage.com/showcase?o=wp35e
  * Generate revenue by integrating ads in the polls
  * Gather contact info(emails, social profiles, etc)
  * Get up& going in minutes
-<br>
-<br>
+
+= Introduction video: =
+ 
 http://www.youtube.com/watch?v=P7xKNlWbk0s
 
 = Main Poll Features: =
