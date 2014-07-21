@@ -131,6 +131,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 8.4.0 =
+  * Add first version of poll discovery feature
+  * Resolve issue with image addition
  = Version 8.3.0 =
   * Add the option to integrate advertisement into the polls for generating revenue
   * Optimizations for poll display in mobile environments
