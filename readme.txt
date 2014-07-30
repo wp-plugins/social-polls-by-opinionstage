@@ -27,7 +27,6 @@ For examples, checkout the <a href="http://www.opinionstage.com/showcase?o=wp35e
  * Gather contact info such as emails & social profiles
  * Get up and going in minutes
 <br>
-<br>
  
 http://www.youtube.com/watch?v=P7xKNlWbk0s
 
@@ -131,6 +130,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 8.5.0 =
+  * Improve process of adding polls to site
+  * Improve returning traffic tracking mechanism
  = Version 8.4.0 =
   * Add first version of poll discovery feature
   * Resolve issue with image addition
