@@ -7,11 +7,11 @@ Requires at least: 2.8
 Tested up to: 3.9.1
 Stable tag: trunk
  
-Add a powerful & easy-to-use social polling solution to your site.
+Add a powerful & easy-to-use online polling solution to your site.
 
 == Description ==
 
-The Opinion Stage poll plug-in allows you to easily add social (or standard) polls to your website or Facebook page.
+The Opinion Stage poll plug-in allows you to easily add a standard or social polls to your website or Facebook page.
 
 = Poll Examples: =
 
@@ -130,6 +130,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 8.6.0 =
+  * Poll performance improvements for peek scenarios
+  * New banner type ad unit
  = Version 8.5.0 =
   * Improve process of adding polls to site
   * Improve returning traffic tracking mechanism
