@@ -4,7 +4,7 @@ Donate link:
 Tags: poll, polls, polling, vote, voting, debate, survey, social, opinionstage, opinion stage 
 
 Requires at least: 2.8
-Tested up to: 3.9.1
+Tested up to: 4.0
 Stable tag: trunk
  
 Add a powerful & easy-to-use online polling solution to your site.
@@ -130,6 +130,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 8.9.0 =
+  * Various additions and improvements to the poll style studio
+  * Support for wide pages
  = Version 8.8.0 =
   * Improved poll built-in UI styles
   * New capabilities to poll style studio
