@@ -11,7 +11,7 @@ Add a powerful & easy-to-use online polling solution to your site.
 
 == Description ==
 
-The Opinion Stage poll plug-in allows you to easily add a standard or social polls to your website or Facebook page.
+The Opinion Stage poll plug-in allows you to easily add standard or social polls to your website or Facebook page.
 
 = Poll Examples: =
 
@@ -130,6 +130,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 9.1.0 =
+  * Added the option to add Facebook comments to the polls
+  * Improvements to poll creation flow
  = Version 9.0.0 =
   * New poll head-to-head themes
   * Poll UI optimizations
