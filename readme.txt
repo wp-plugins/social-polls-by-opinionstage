@@ -7,7 +7,7 @@ Requires at least: 2.8
 Tested up to: 4.0
 Stable tag: trunk
  
-Add a powerful & easy-to-use online polling solution to your site.
+Add a powerful & easy-to-use polling solution to your site. 
 
 == Description ==
 
@@ -130,6 +130,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 9.2.0 =
+  * Support displaying ads before showing the results
+  * Support reordering the sides of the poll
  = Version 9.1.0 =
   * Added the option to add Facebook comments to the polls
   * Improvements to poll creation flow
