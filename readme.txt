@@ -7,7 +7,7 @@ Requires at least: 2.8
 Tested up to: 4.0
 Stable tag: trunk
  
-Add a powerful & easy-to-use polling solution to your site. Create beautiful polls that boost time on site, drive new traffic and can even generate revenue.
+Add a powerful & easy-to-use polling solution to your site. Create beautiful polls that boost time on site, drive traffic to your site.
 
 == Description ==
 
