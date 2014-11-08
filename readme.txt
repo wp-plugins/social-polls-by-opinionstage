@@ -130,6 +130,9 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 9.4.0 =
+  * Allow users to add their own answers
+  * Head2Head polls - mobile optimizations
  = Version 9.3.0 =
   * Support adding custom texts to the interface
   * Solve minor UI issues
