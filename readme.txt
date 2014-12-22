@@ -130,6 +130,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog == 
+ = Version 9.9.0 =
+  * Various fixes
  = Version 9.8.0 =
   * Poll discovery first version
  = Version 9.7.0 =
