@@ -145,7 +145,8 @@ function opinionstage_add_poll_page() {
 			<li><?php echo opinionstage_create_link('View Polls', 'dashboard', ''); ?></li>
 			<li><?php echo opinionstage_create_link('Create a Set', 'sets/new', ''); ?></li>
 			<li><?php echo opinionstage_create_link('View Sets', 'dashboard', 'tab=sets'); ?></li>			
-			<li><?php echo opinionstage_create_link('View Containers', 'dashboard', 'tab=containers'); ?></li>			
+			<li><?php echo opinionstage_create_link('View Containers', 'dashboard', 'tab=containers'); ?></li>
+			<li><a href="<?php _e(admin_url('admin.php?page=addpollstoallposts')) ?>">Add Polls to all posts</a></li>
 		  </ul>
 		  <h2>Help</h2>
 		  <ul class="os_links_list">			
@@ -279,4 +280,9 @@ function opinionstage_poll_tinymce_addplugin($plugin_array) {
 	$plugin_array['ospolls'] = plugins_url(OPINIONSTAGE_WIDGET_UNIQUE_ID.'/tinymce/plugins/polls/editor_plugin.js');
 	return $plugin_array;
 }
+
+/**
+ * Add polls to all posts admin page
+ */
+require_once('opinionstage_add_polls_to_all_posts.php');
 ?>

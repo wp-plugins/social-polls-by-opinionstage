@@ -130,6 +130,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog ==
+  = Version 10.7.0 =
+  * New options for adding polls or sets to all posts 
   = Version 10.6.0 =
   * Poll sets and poll placements - improved interface
   = Version 10.5.0 =
