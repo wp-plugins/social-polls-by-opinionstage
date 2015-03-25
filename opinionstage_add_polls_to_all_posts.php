@@ -5,6 +5,8 @@
 		static function bootstrap() {
 			add_action($hook = 'admin_menu', array(__CLASS__, $hook));
 			add_filter($hook = 'the_content', array(__CLASS__, $hook));
+			add_action($hook = 'add_meta_boxes', array(__CLASS__, $hook));
+			add_action($hook = 'save_post', array(__CLASS__, $hook));
 		}
 		
 		static function admin_menu() {
@@ -12,20 +14,67 @@
 			$url = self::register_admin_page($page_callback);
 		}
 		
+		static function add_meta_boxes() {
+			$post_types = get_post_types(array('public' => true));
+			foreach ($post_types as $pt) {
+				if ($pt == 'attachment') continue;
+				add_meta_box('aptap_meta', 'Poll Display', array(__CLASS__, 'render_meta_box'), $pt, 'normal', 'high');
+			}
+		}
+		
+		static function get_aptap_post_setting($post_id) {
+			$aptap_post_setting = get_post_meta($post_id, 'aptap_post_setting', true);
+			if (empty($aptap_post_setting) || !is_numeric($aptap_post_setting) || ($aptap_post_setting <= 0 && $aptap_post_setting >= 4)) $aptap_post_setting = 1;
+			return $aptap_post_setting;
+		}
+		
+		static function render_meta_box() {
+			global $post;
+			$aptap_post_setting = AddPollsToAllPosts::get_aptap_post_setting($post->ID);
+			?>
+				<label for="aptap_post_setting_1" class="selectit"><input name="aptap_post_setting" type="radio" id="aptap_post_setting_1" value="1" <?php checked($aptap_post_setting, 1) ?>>Use global setting for this post type.</label><br />
+				<!--<label for="aptap_post_setting_2" class="selectit"><input name="aptap_post_setting" type="radio" id="aptap_post_setting_2" value="2" <?php checked($aptap_post_setting, 2) ?>>Show selected poll at the end of this post.</label><br />-->
+				<label for="aptap_post_setting_3" class="selectit"><input name="aptap_post_setting" type="radio" id="aptap_post_setting_3" value="3" <?php checked($aptap_post_setting, 3) ?>>Don't show any polls at the end of this post.</label>
+			<?php
+		}
+		
+		static function save_post($post_id) {
+			if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) return;
+			$aptap_post_setting = isset($_POST['aptap_post_setting']) && !empty($_POST['aptap_post_setting']) ? $_POST['aptap_post_setting'] : 1;
+			update_post_meta($post_id, 'aptap_post_setting', $aptap_post_setting);
+		}
+		
 		static function the_content($content) {
 			global $post;
-			$opinionstage_aptap = get_option('opinionstage_aptap');
-			if (is_array($opinionstage_aptap)) {
-				if (isset($opinionstage_aptap['post_types']) && !empty($opinionstage_aptap['post_types']) && is_array($opinionstage_aptap['post_types'])) {
-					if (in_array($post->post_type, $opinionstage_aptap['post_types'])) {
-						$shortcode = do_shortcode(
-							sprintf(
-								'[socialpoll id="%s" type="%s"]', 
-								$opinionstage_aptap['configure_id'], 
-								$opinionstage_aptap['content_types']
-							)
-						);
-						return $content . $shortcode;
+			$aptap_post_setting = AddPollsToAllPosts::get_aptap_post_setting($post->ID);
+			if ($aptap_post_setting == 3) {
+				return $content;
+			/*
+			} else if ($aptap_post_setting == 2) {
+				$opinionstage_aptap = get_option('opinionstage_aptap');
+				$shortcode = do_shortcode(
+					sprintf(
+						'[socialpoll id="%s" type="%s"]', 
+						$opinionstage_aptap['configure_id'], 
+						$opinionstage_aptap['content_types']
+					)
+				);
+				return $content . $shortcode;
+			*/
+			} else {
+				$opinionstage_aptap = get_option('opinionstage_aptap');
+				if (is_array($opinionstage_aptap)) {
+					if (isset($opinionstage_aptap['post_types']) && !empty($opinionstage_aptap['post_types']) && is_array($opinionstage_aptap['post_types'])) {
+						if (in_array($post->post_type, $opinionstage_aptap['post_types'])) {
+							$shortcode = do_shortcode(
+								sprintf(
+									'[socialpoll id="%s" type="%s"]', 
+									$opinionstage_aptap['configure_id'], 
+									$opinionstage_aptap['content_types']
+								)
+							);
+							return $content . $shortcode;
+						}
 					}
 				}
 			}
@@ -61,12 +110,13 @@
 				<div id="opinionstage-head"></div>
 				<div class="section">
 					<form action="" method="POST"
-						<h2>Add Polls to all Posts</h2>
+						<h2>Add Poll section to posts / pages</h2>
 						<hr />
-						<h3>Select post types</h3>
+						<h3>Add to</h3>
 						<div class="chkboxs" style="background-color: #FFF; border: 1px solid #DDD; padding: 5px 20px 5px 10px; display: inline-block;">
 							<?php foreach ($post_types as $pt) { ?>
 								<?php
+									if ($pt == 'attachment') continue;
 									$is_checked = false;
 									if (is_array(os_get_option($opinionstage_aptap, 'post_types'))) {
 										$post_types = os_get_option($opinionstage_aptap, 'post_types');
@@ -77,22 +127,22 @@
 							<?php } ?>
 						</div>
 						<br />
-						<h3><label for="pt-ct">Select content type</label></h3>
+						<h3><label for="pt-ct">Select content types</label></h3>
 						<select name="opinionstage_aptap[content_types]" id="pt-ct">
 							<option value="poll" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'poll' ? 'selected="selected"' : '') ?>>Poll</option>
-							<option value="container" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'container' ? 'selected="selected"' : '') ?>>Placement</option>
 							<option value="set" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'set' ? 'selected="selected"' : '') ?>>Set</option>
+							<option value="container" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'container' ? 'selected="selected"' : '') ?>>Placement</option>							
 						</select>
 						<br />
 						<h3><label for="pt-cnfid">Configure ID</label></h3>
 						<input type="text" value="<?php _e(os_get_option($opinionstage_aptap, 'configure_id')) ?>" name="opinionstage_aptap[configure_id]" id="pt-cnfid" />
-						<div><a href="#" id="pt-locid" target="_blank">Locate ID in Dashboard</a></div>
+						<div><a href="#" id="pt-locid">Locate ID in Dashboard</a></div>
 						<br />
 						<p class="submit"><input type="submit" class="button button-primary" value="Save Changes"></p>
 						<br />
 						<div style="background-color: #FFF; border: 1px solid #DDD; padding: 5px 20px 5px 10px; display: inline-block; max-width: 300px;">Note: If you would like to add a poll to only one post/page, click on the Opinion Stage icon from the create post/page visual editor.</div>
 						<br />
-						<p>Need more help? <a href="http://blog.opinionstage.com/wordpress-poll-how-to-add-polls-to-wordpress-sites/" target="_blank">Click here!</a></p>
+						<p>Need more help? <a href="http://blog.opinionstage.com/wordpress-poll-how-to-add-polls-to-wordpress-sites/">Click here!</a></p>
 					</form>
 				</div>
 			</div>

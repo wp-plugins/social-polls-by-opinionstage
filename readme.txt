@@ -130,6 +130,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog ==
+  = Version 10.9.0 =
+  * Allow disabling global poll section for specific posts
   = Version 10.8.0 =
   * Texts changes
   = Version 10.7.0 =

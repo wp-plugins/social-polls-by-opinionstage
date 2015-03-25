@@ -145,13 +145,13 @@ function opinionstage_add_poll_page() {
 			<li><?php echo opinionstage_create_link('View Polls', 'dashboard', ''); ?></li>
 			<li><?php echo opinionstage_create_link('Create a Set', 'sets/new', ''); ?></li>
 			<li><?php echo opinionstage_create_link('View Sets', 'dashboard', 'tab=sets'); ?></li>			
-			<li><?php echo opinionstage_create_link('View Containers', 'dashboard', 'tab=containers'); ?></li>
-			<li><a href="<?php _e(admin_url('admin.php?page=addpollstoallposts')) ?>">Add Polls to all posts</a></li>
+			<li><?php echo opinionstage_create_link('View Placements', 'dashboard', 'tab=containers'); ?></li>
+			<li><a href="<?php _e(admin_url('admin.php?page=addpollstoallposts')) ?>">Add Poll section to posts / pages</a></li>
 		  </ul>
 		  <h2>Help</h2>
 		  <ul class="os_links_list">			
 			<li><a href="http://blog.opinionstage.com/wordpress-poll-how-to-add-polls-to-wordpress-sites/?o=wp35e8" target="_blank">Help</a></li>					  
-			<li><?php echo opinionstage_create_link('Showcase', 'showcase', ''); ?></li>
+			<li><?php echo opinionstage_create_link('View Examples', 'showcase', ''); ?></li>
 			<li><a href="https://opinionstage.zendesk.com/anonymous_requests/new" target="_blank">Contact Us</a></li>					  
 		  </ul>	  
 	  </div>  
