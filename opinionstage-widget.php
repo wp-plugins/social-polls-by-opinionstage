@@ -34,11 +34,11 @@
 				<input class="widefat" id="<?php echo $this->get_field_id('title'); ?>" name="<?php echo $this->get_field_name('title'); ?>" type="text" value="<?php echo $title; ?>" /></p>
 				
 				<p>
-					<label for="<?php echo $this->get_field_id('type'); ?>"><?php _e('Display:', OPINIONSTAGE_WIDGET_UNIQUE_ID); ?></label>
+					<label for="<?php echo $this->get_field_id('type'); ?>"><?php _e('Select content type:', OPINIONSTAGE_WIDGET_UNIQUE_ID); ?></label>
 					<select class="widefat" name="<?php echo $this->get_field_name('type'); ?>" id="<?php echo $this->get_field_id('type'); ?>">
-						<option value="poll" <?php selected($type, 'poll') ?>>Display Poll</option>
-						<option value="set" <?php selected($type, 'set') ?>>Display Set</option>
-						<option value="container" <?php selected($type, 'container') ?>>Display Container</option>
+						<option value="poll" <?php selected($type, 'poll') ?>>Poll</option>
+						<option value="set" <?php selected($type, 'set') ?>>Set</option>
+						<option value="container" <?php selected($type, 'container') ?>>Placement</option>
 						<option value="0" <?php selected($type, 0) ?>>Do not display anything (Disable)</option>
 					</select>
 				</p>

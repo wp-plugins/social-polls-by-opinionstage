@@ -61,7 +61,7 @@
 				<div id="opinionstage-head"></div>
 				<div class="section">
 					<form action="" method="POST"
-						<h2>Add polls to all posts</h2>
+						<h2>Add Polls to all Posts</h2>
 						<hr />
 						<h3>Select post types</h3>
 						<div class="chkboxs" style="background-color: #FFF; border: 1px solid #DDD; padding: 5px 20px 5px 10px; display: inline-block;">
@@ -77,10 +77,10 @@
 							<?php } ?>
 						</div>
 						<br />
-						<h3><label for="pt-ct">Select content types</label></h3>
+						<h3><label for="pt-ct">Select content type</label></h3>
 						<select name="opinionstage_aptap[content_types]" id="pt-ct">
 							<option value="poll" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'poll' ? 'selected="selected"' : '') ?>>Poll</option>
-							<option value="container" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'container' ? 'selected="selected"' : '') ?>>Container</option>
+							<option value="container" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'container' ? 'selected="selected"' : '') ?>>Placement</option>
 							<option value="set" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'set' ? 'selected="selected"' : '') ?>>Set</option>
 						</select>
 						<br />
