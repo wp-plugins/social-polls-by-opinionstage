@@ -146,7 +146,7 @@ function opinionstage_add_poll_page() {
 			<li><?php echo opinionstage_create_link('Create a Set', 'sets/new', ''); ?></li>
 			<li><?php echo opinionstage_create_link('View Sets', 'dashboard', 'tab=sets'); ?></li>			
 			<li><?php echo opinionstage_create_link('View Placements', 'dashboard', 'tab=containers'); ?></li>
-			<li><a href="<?php _e(admin_url('admin.php?page=addpollstoallposts')) ?>">Add Poll section to posts / pages</a></li>
+			<li><a href="<?php _e(admin_url('admin.php?page=addpollstoallposts')) ?>">Add a Poll section to posts / pages</a></li>
 		  </ul>
 		  <h2>Help</h2>
 		  <ul class="os_links_list">			

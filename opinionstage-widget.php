@@ -65,7 +65,7 @@
 					<p><?php echo opinionstage_create_link('Locate the Set ID', 'dashboard', 'tab=sets'); ?></p>
 				</div>
 				<div class="containerWrp" style="display: none;">
-					<p><?php echo opinionstage_create_link('Locate the Container ID', 'dashboard', 'tab=containers'); ?></p>
+					<p><?php echo opinionstage_create_link('Locate the Placement ID', 'dashboard', 'tab=containers'); ?></p>
 				</div>
 				
 				<script type="text/javascript">

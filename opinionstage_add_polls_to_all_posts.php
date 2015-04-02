@@ -110,9 +110,9 @@
 				<div id="opinionstage-head"></div>
 				<div class="section">
 					<form action="" method="POST"
-						<h2>Add Poll section to posts / pages</h2>
+						<h2>Add a Poll section to posts / pages</h2>
 						<hr />
-						<h3>Add to</h3>
+						<h3>Where to add:</h3>
 						<div class="chkboxs" style="background-color: #FFF; border: 1px solid #DDD; padding: 5px 20px 5px 10px; display: inline-block;">
 							<?php foreach ($post_types as $pt) { ?>
 								<?php
@@ -127,7 +127,7 @@
 							<?php } ?>
 						</div>
 						<br />
-						<h3><label for="pt-ct">Select content types</label></h3>
+						<h3><label for="pt-ct">What to add:</label></h3>
 						<select name="opinionstage_aptap[content_types]" id="pt-ct">
 							<option value="poll" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'poll' ? 'selected="selected"' : '') ?>>Poll</option>
 							<option value="set" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'set' ? 'selected="selected"' : '') ?>>Set</option>
@@ -140,7 +140,7 @@
 						<br />
 						<p class="submit"><input type="submit" class="button button-primary" value="Save Changes"></p>
 						<br />
-						<div style="background-color: #FFF; border: 1px solid #DDD; padding: 5px 20px 5px 10px; display: inline-block; max-width: 300px;">Note: If you would like to add a poll to only one post/page, click on the Opinion Stage icon from the create post/page visual editor.</div>
+						<div style="background-color: #FFF; border: 1px solid #DDD; padding: 5px 20px 5px 10px; display: inline-block; max-width: 300px;">Note: If you would like to add a poll/set to only one post/page, click on the Opinion Stage icon from the create post/page visual editor.</div>
 						<br />
 						<p>Need more help? <a href="http://blog.opinionstage.com/wordpress-poll-how-to-add-polls-to-wordpress-sites/">Click here!</a></p>
 					</form>
