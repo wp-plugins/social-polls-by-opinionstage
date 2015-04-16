@@ -116,13 +116,13 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 
 == Screenshots ==
 
-1. **Multiple-choice poll** - Example of a multiple-choice social poll, note that you can view who voted what and view the poll voters social profile. You can also filter the poll results by the people you follow, by gender of the poll participants and more
-2. **Head-to-head poll** - Example of a head-to-head standard poll with 2 images
-3. **Side-bar poll** -  Example of a side-bar poll, note that you can fully configure the poll including poll width & height, font size & color and more
-4. **Insert poll icon** - From the WordPress editor, click on the insert poll icon to add a poll to the post/page
-5. **Add poll to side-bar** - From the widget list, add the “Polls by Opinion Stage” widget and configure which poll to display
-6. **Start a poll form** - Just add a question, add sides and you're ready to go. Optionally set & edit many advanced poll settings to optimize the poll display & functionality
-7. **Poll social sharing dialog** - after voting, the user is (optionally) offered to share the poll vote in the social networks he uses. You can set the link, text & image of the shares
+1. **Multiple-choice poll** - example of a multiple-choice social poll, note that you can view who voted what and view the poll voters social profile. You can also filter the poll results by the people you follow, by gender of the poll participants and more
+2. **Head-to-head poll** - example of a head-to-head poll, use this poll layout for highly engaging interactions
+3. **Social sharing** -  after voting, users are offered to share their votes in social networks (Facebook, Twitter, Google+), driving traffic back to your site
+4. **Poll set** - example of polls grouped into a poll set, users can navigate between the different polls based on a pre-defined logic
+5. **Poll in post** - you can add polls inside any post/page by adding the Opinion Stage short-code directly or by clicking on the Insert poll icon and inserting the ID
+6. **Poll in sidebar** - you can add polls to your sidebar using the Opinion Stage widget (find it in the Appearance->Widgets screen)
+7. **Poll section in all articles** - you can configure that a poll or a set of polls is displayed at the end of all or specific sections of posts/pages
 8. **Poll results** - From the Opinion Stage dashboard view the poll results and poll performance metrics
 
 == Upgrade Notice == 
@@ -130,6 +130,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog ==
+  = Version 11.2.0 =
+  * Various functionality & usability improvements
   = Version 11.1.0 =
   * Head-to-Head Poll - new revamped UI (first version)
   = Version 11.0.0 =
