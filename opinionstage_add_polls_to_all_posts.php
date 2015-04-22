@@ -87,7 +87,7 @@
 			$hookname = get_plugin_page_hookname(AddPollsToAllPosts::$identifier, $parent_slug);
 			add_filter($hookname, $callback);
 			$GLOBALS['_registered_pages'][$hookname] = true;
-			$url = admin_url($parent_slug . '?page=' . $identifier);
+			$url = admin_url($parent_slug . '?page=' . AddPollsToAllPosts::$identifier);
 			return $url;
 		}
 		
