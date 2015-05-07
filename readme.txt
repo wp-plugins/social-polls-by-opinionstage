@@ -7,7 +7,7 @@ Requires at least: 2.8
 Tested up to: 4.1
 Stable tag: trunk
  
-Add a powerful & easy-to-use polling solution to your site. Create beautiful polls that boost time on site and drive traffic to your site.
+Add a powerful & easy-to-use polling service to your site. Create beautiful polls that boost time on site and drive traffic to your site.
 
 == Description ==
 
@@ -131,7 +131,8 @@ N/A
 
 == Changelog ==
   = Version 11.4.0 =
-  * Fixed compatibility issues
+  * New poll ad configuration
+  * New poll MC UI format 
   = Version 11.3.0 =
   * First Trivia poll version
   = Version 11.2.0 =
