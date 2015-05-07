@@ -4,7 +4,7 @@ Donate link:
 Tags: poll, polls, polling, vote, voting, debate, survey, social, opinionstage, opinion stage 
 
 Requires at least: 2.8
-Tested up to: 4.1
+Tested up to: 4.2.2
 Stable tag: trunk
  
 Add a powerful & easy-to-use polling solution to your site. Create beautiful polls that boost time on site and drive traffic to your site.
