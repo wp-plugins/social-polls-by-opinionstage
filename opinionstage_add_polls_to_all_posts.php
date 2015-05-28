@@ -135,7 +135,7 @@
 						<br />
 						<h3><label for="pt-cnfid">Configure ID</label></h3>
 						<input type="text" value="<?php _e(os_get_option($opinionstage_aptap, 'configure_id')) ?>" name="opinionstage_aptap[configure_id]" id="pt-cnfid" />
-						<div><a href="#" id="pt-locid">Locate ID in Dashboard</a></div>
+						<div><a href="#" id="pt-locid" target="_blank">Locate ID in Dashboard</a></div>
 						<br />
 						<p class="submit"><input type="submit" class="button button-primary" value="Save Changes"></p>
 						<br />
