@@ -130,6 +130,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog ==
+  = Version 11.8.0 =
+  * Plugin minor changes
   = Version 11.7.0 =
   * Image cropping
   = Version 11.6.0 =

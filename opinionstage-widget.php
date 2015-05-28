@@ -38,8 +38,7 @@
 					<select class="widefat" name="<?php echo $this->get_field_name('type'); ?>" id="<?php echo $this->get_field_id('type'); ?>">
 						<option value="poll" <?php selected($type, 'poll') ?>>Poll</option>
 						<option value="set" <?php selected($type, 'set') ?>>Set</option>
-						<option value="container" <?php selected($type, 'container') ?>>Placement</option>
-						<option value="0" <?php selected($type, 0) ?>>Do not display anything (Disable)</option>
+						<option value="0" <?php selected($type, 0) ?>>Disable</option>
 					</select>
 				</p>
 				
@@ -51,9 +50,6 @@
 						<span class="setWrp" style="display: none;">
 							<?php _e('Set ID:', OPINIONSTAGE_WIDGET_UNIQUE_ID); ?>
 						</span>
-						<span class="containerWrp" style="display: none;">
-							<?php _e('Container ID:', OPINIONSTAGE_WIDGET_UNIQUE_ID); ?>
-						</span>
 					</label>
 					<input class="widefat" id="<?php echo $this->get_field_id('id'); ?>" name="<?php echo $this->get_field_name('id'); ?>" type="text" value="<?php echo $id; ?>" />
 				</p>
@@ -64,23 +60,18 @@
 				<div class="setWrp" style="display: none;">
 					<p><?php echo opinionstage_create_link('Locate the Set ID', 'dashboard', 'tab=sets'); ?></p>
 				</div>
-				<div class="containerWrp" style="display: none;">
-					<p><?php echo opinionstage_create_link('Locate the Placement ID', 'dashboard', 'tab=containers'); ?></p>
-				</div>
-				
+								
 				<script type="text/javascript">
 					jQuery(function ($)
 					{
 						var $pollWrp = $(".pollWrp");
 						var $setWrp = $(".setWrp");
-						var $containerWrp = $(".containerWrp");
 						$("#<?php echo $this->get_field_id('type'); ?>").change(function (e)
 						{
 							var $this = $(this);
 							var val = $this.val();
 							if (val == "poll")
 							{
-								$containerWrp.stop(false, true).fadeOut(0);
 								$setWrp.stop(false, true).fadeOut(0, function ()
 								{
 									$pollWrp.stop(false, true).fadeIn(e.isTrigger ? 0 : "fast");
@@ -88,20 +79,11 @@
 							}
 							else if (val == "set")
 							{
-								$containerWrp.stop(false, true).fadeOut(0);
 								$pollWrp.stop(false, true).fadeOut(0, function ()
 								{
 									$setWrp.stop(false, true).fadeIn(e.isTrigger ? 0 : "fast");
 								});					
-							}
-							else if (val == "container")
-							{
-								$setWrp.stop(false, true).fadeOut(0);
-								$pollWrp.stop(false, true).fadeOut(0, function ()
-								{
-									$containerWrp.stop(false, true).fadeIn(e.isTrigger ? 0 : "fast");
-								});					
-							}
+							}							
 						}).trigger("change");
 						$(window).load(function ()
 						{

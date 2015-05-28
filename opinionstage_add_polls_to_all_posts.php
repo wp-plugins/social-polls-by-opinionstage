@@ -110,7 +110,7 @@
 				<div id="opinionstage-head"></div>
 				<div class="section">
 					<form action="" method="POST"
-						<h2>Add a Poll section to posts / pages</h2>
+						<h2>Add Polls to all articles</h2>
 						<hr />
 						<h3>Where to add:</h3>
 						<div class="chkboxs" style="background-color: #FFF; border: 1px solid #DDD; padding: 5px 20px 5px 10px; display: inline-block;">
@@ -130,8 +130,7 @@
 						<h3><label for="pt-ct">What to add:</label></h3>
 						<select name="opinionstage_aptap[content_types]" id="pt-ct">
 							<option value="poll" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'poll' ? 'selected="selected"' : '') ?>>Poll</option>
-							<option value="set" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'set' ? 'selected="selected"' : '') ?>>Set</option>
-							<option value="container" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'container' ? 'selected="selected"' : '') ?>>Placement</option>							
+							<option value="set" <?php _e(os_get_option($opinionstage_aptap, 'content_types') == 'set' ? 'selected="selected"' : '') ?>>Set</option>						
 						</select>
 						<br />
 						<h3><label for="pt-cnfid">Configure ID</label></h3>
@@ -155,8 +154,7 @@
 						var $this = $(this),
 							v = $this.val(),
 							$locid = $("#pt-locid");
-						var rootURL = "http://www.opinionstage.com/dashboard?o=wp35e8";
-						if (v == "container") rootURL += "&tab=containers";
+						var rootURL = "http://www.opinionstage.com/dashboard?o=wp35e8";						
 						if (v == "set") rootURL += "&tab=sets";
 						$locid.attr("href", rootURL);
 					}).trigger("change");

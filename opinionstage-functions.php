@@ -3,7 +3,7 @@
 
 /**
  * Main function for creating the widget html representation.
- * Transforms the shorcode parameters to the desired iframe call.
+ * Transforms the shortcode parameters to the desired iframe call.
  *
  * Syntax as follows:
  * shortcode name - OPINIONSTAGE_WIDGET_SHORTCODE
@@ -39,9 +39,7 @@ function opinionstage_create_embed_code($id, $type) {
 		$code = get_transient($transient_name);
 		if ( false === $code || '' === $code ) {
 			if ($type == 'set') {
-				$embed_code_url = "http://".OPINIONSTAGE_SERVER_BASE."/api/sets/" . $id . "/embed_code.json";
-			} else if ($type == 'container') {
-				$embed_code_url = "http://".OPINIONSTAGE_SERVER_BASE."/api/containers/" . $id . "/embed_code.json";
+				$embed_code_url = "http://".OPINIONSTAGE_SERVER_BASE."/api/sets/" . $id . "/embed_code.json";			
 			} else {
 				$embed_code_url = "http://".OPINIONSTAGE_SERVER_BASE."/api/debates/" . $id . "/embed_code.json";
 			}
@@ -144,9 +142,8 @@ function opinionstage_add_poll_page() {
 			<li><?php echo opinionstage_create_link('Create a Poll', 'new_poll', ''); ?></li>
 			<li><?php echo opinionstage_create_link('View Polls', 'dashboard', ''); ?></li>
 			<li><?php echo opinionstage_create_link('Create a Set', 'sets/new', ''); ?></li>
-			<li><?php echo opinionstage_create_link('View Sets', 'dashboard', 'tab=sets'); ?></li>			
-			<li><?php echo opinionstage_create_link('View Placements', 'dashboard', 'tab=containers'); ?></li>
-			<li><a href="<?php _e(admin_url('admin.php?page=addpollstoallposts')) ?>">Add a Poll section to posts / pages</a></li>
+			<li><?php echo opinionstage_create_link('View Sets', 'dashboard', 'tab=sets'); ?></li>						
+			<li><a href="<?php _e(admin_url('admin.php?page=addpollstoallposts')) ?>">Add Polls to all articles</a></li>
 		  </ul>
 		  <h2>Help</h2>
 		  <ul class="os_links_list">			
