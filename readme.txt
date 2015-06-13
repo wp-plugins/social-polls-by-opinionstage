@@ -69,50 +69,43 @@ Opinion Stage offers web sites a highly engaging opinion polling solution. For m
 
 == Frequently Asked Questions ==
 
-
 = What sets Opinion Stage online polls apart from other online polling solutions? =
 
-Opinion Stage online polls are social polls which means that social network identities are used for polling the participants. This makes the poll more engaging than the typical online poll, letting users discover who supports what and how each user voted in other polls. You can also follow users and then filter the poll results by the people you follow. Using social polls improves the distribution of the poll in social networks, allows gathering contact, demographic & social statistics from the poll participants. Lastly, social polls also work very well for elections & competitions.
+While Opinion Stage offers all the standard features expected from an advanced and professional polling solutions, Opinion Stage also offers some unique functionality which you won't find in most other solutions. This includes:
+1) Generate revenue from your polling service (mostly relevant for high volume sites) by integrating different types of advertisements
+2) Get your polls shared in the popular social networks driving traffic back to your site
+3) An advanced reporting dashboard that let's you discover the engagement level of your polls, how many people shared them in social networks and the traffic that generated for your site
+4) A lead generation component, that lets you gather emails and social network profiles 
+5) A social voting module that lets you require or make it optional to vote with a social profile. Using the module, you can filter the poll results by social, demographic and behavioral filters including geo location, time, gender, social network and more
+6)  A special module for using the online polls for running elections, contests and sweepstakes
+7) Advanced customizations of the polls including setting the size, color, font, and more attributes so that the poll fits perfectly into your site
+8) Advanced integrations with images & videos to make your polls appealing, beautiful and more informative
+9) Poll sets that let you group many polls together, letting your 
+10) Placements let you easily add polls to your sidebar, to an article section or as an auto-engage popup displayed on your site
+And many more...
 
-= Do you require users to identify by logging-in before voting? =
+= How do I add a poll to my post/page? =
 
-When creating the polls you can determine if a social profile is required, if it is optional or if it is not required at all for voting. Opinion Stage online polls currently support Facebook, Twitter & Google login, and will include additional poll login options in the future. 
+1.	Create a new poll from the poll creation form
+2.	After the poll was created, click "Add to Your Site" link and then click the "WordPress" tab 
+3.	Copy the WordPress poll code ( e.g. [socialpoll id="119543"] ) and paste it into the blog post/page
+
+= What is the embed ID and where can I find it? =
+
+Each poll has a unique ID which identifies it. The poll ID can be found in the WordPress code (e.g. if [socialpoll id="119543"] is the WordPress code, 119543 is the poll ID)
  
-= Do you support anonymous voting? =
+= Can I embed a poll manually? =
 
-When using a social profile to participate in the poll, you can hide your vote so that nobody besides yourself knows what you voted in the poll. In addition, the administator can configure that users can vote anonymously in the poll without requiring a social profile.
+Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], where the xyz represents the poll ID.
 
 = How do users share the poll & their vote in social networks? = 
 
-Users can either share the poll question from the social (e.g. Facebook & Twitter) sharing buttons that are displayed on the top of the poll or by sharing the social sharing dialog that is displayed automatically after they vote in the poll. Opinion Stage never shares anything on the users' behalf without getting explicit permission for it.
-
-= What are the benefits of using social polls? =
-
-Using social polls offer the following main benefits: (1) improves user engagement on the site (2) drives traffic from social networks to the site (3) allow you to discover the the person behind the opinion (4) serves as a great tool for running elections & contests (5) allow you to gather contact, social & demographic information from the poll participants
+Users can either share the poll question from the social (e.g.Users can either share the poll by clicking on the social (e.g. Facebook, Twitter & Google+) sharing or by sharing their poll/vote directly in the social sharing dialog that is displayed automatically after they vote in the poll. Opinion Stage never shares anything on the users' behalf without getting explicit permission for it.
 
 = What types of online polls do you support? =
 
 We support both regular multiple-sided polls and a special head-to-head poll flavor (for the 2-sided polls)
 
-= Do you plan to add debating capabilities to the poll? =
-
-Yes, we plan to add the option to debate the poll. Users will be able to add a text explanation to their votes so the vote can be debated.
-
-= How do I add a poll to my post/page? =
-
-Follow these steps:
-
-1. Create a new poll from <a href="http://www.opinionstage.com?o=wp35e8" target="_blank">here</a>
-2. After the poll was created, from the dashboard, click "Add to Website" link and copy the WordPress poll code ( e.g. [socialpoll id="119543"] )
-3. Paste the poll code you copied into the blog post/page/section
-
-= What is the embed ID and where can I find it? =
-
-Each poll has a unique ID which identifies it. The poll ID can be found in the WordPress code (e.g. if [socialpoll id="119543"] is the WordPress code, 119543 is the poll ID)
-
-= Can I embed a poll manually? =
-
-Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], where the xyz represents the poll ID.
 
 == Screenshots ==
 
@@ -130,6 +123,8 @@ Yes, just post the following syntax into any post/page: [socialpoll ID="xyz"], w
 N/A
 
 == Changelog ==
+  = Version 11.9.0 =
+  * Poll Placement improvements
   = Version 11.8.0 =
   * Plugin minor changes
   = Version 11.7.0 =
