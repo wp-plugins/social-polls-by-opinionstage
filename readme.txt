@@ -123,6 +123,9 @@ We support both regular multiple-sided polls and a special head-to-head poll fla
 N/A
 
 == Changelog ==
+  = Version 12.0.0 =
+  * Support for SSL when voting with social profiles
+  * revamp of content recommendation mechanism
   = Version 11.9.0 =
   * Poll Placement improvements
   = Version 11.8.0 =
