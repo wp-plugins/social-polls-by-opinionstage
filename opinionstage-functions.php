@@ -2,97 +2,28 @@
 /* --- Wordpress Hooks Implementations --- */
 
 /**
- * Main function for creating the widget html representation.
- * Transforms the shortcode parameters to the desired iframe call.
- *
- * Syntax as follows:
- * shortcode name - OPINIONSTAGE_WIDGET_SHORTCODE
- *
- * Arguments:
- * @param  id - Id of the poll
- *
+ * Initialize the plugin 
  */
-function opinionstage_add_poll($atts) {
-	extract(shortcode_atts(array('id' => 0, 'type' => 'poll'), $atts));
-	if(!is_feed()) {
-		$id = intval($id);
-		return opinionstage_create_embed_code($id, $type);
-	} else {
-		return __('Note: There is a poll embedded within this post, please visit the site to participate in this post\'s poll.', OPINIONSTAGE_WIDGET_UNIQUE_ID);
-	}
+function opinionstage_init() {
+	opinionstage_initialize_data();	
+	register_uninstall_hook(OPINIONSTAGE_WIDGET_UNIQUE_LOCATION, 'opinionstage_uninstall');	
 }
 
 /**
- * Create the The iframe HTML Tag according to the given parameters.
- * Either get the embed code or embeds it directly in case 
- *
- * Arguments:
- * @param  id - Id of the poll
+ * Initialiaze the data options
  */
-function opinionstage_create_embed_code($id, $type) {
-    
-    // Only present if id is available 
-    if (isset($id) && !empty($id)) {        		
-		// Load embed code from the cache if possible
-		$is_homepage = is_home();
-		$transient_name = 'embed_code' . $id . '_' . $type . '_' . ($is_homepage ? "1" : "0");
-		$code = get_transient($transient_name);
-		if ( false === $code || '' === $code ) {
-			if ($type == 'set') {
-				$embed_code_url = "http://".OPINIONSTAGE_SERVER_BASE."/api/sets/" . $id . "/embed_code.json";			
-			} else {
-				$embed_code_url = "http://".OPINIONSTAGE_SERVER_BASE."/api/debates/" . $id . "/embed_code.json";
-			}
-			
-			if ($is_homepage) {
-				$embed_code_url .= "?h=1";
-			}
-		
-			extract(opinionstage_get_contents($embed_code_url));
-			$data = json_decode($raw_data);
-			if ($success) {
-				$code = $data->{'code'};			
-				// Set the embed code to be cached for an hour
-				set_transient($transient_name, $code, 3600);
-			}
-		}
-    }
-	return $code;
+function opinionstage_initialize_data() {
+	$os_options = (array) get_option(OPINIONSTAGE_OPTIONS_KEY);	
+	$os_options['version'] = OPINIONSTAGE_WIDGET_VERSION;	
+	
+	update_option(OPINIONSTAGE_OPTIONS_KEY, $os_options);
 }
 
 /**
- * Perform an HTTP GET Call to retrieve the data for the required content.
- * 
- * Arguments:
- * @param $url
- * @return array - raw_data and a success flag
+ * Remove the plugin data
  */
-function opinionstage_get_contents($url) {
-    $response = wp_remote_get($url, array('header' => array('Accept' => 'application/json; charset=utf-8')));
-
-    return opinionstage_parse_response($response);
-}
-
-/**
- * Parse the HTTP response and return the data and if was successful or not.
- */
-function opinionstage_parse_response($response) {
-    $success = false;
-    $raw_data = "Unknown error";
-    
-    if (is_wp_error($response)) {
-        $raw_data = $response->get_error_message();
-    
-    } elseif (!empty($response['response'])) {
-        if ($response['response']['code'] != 200) {
-            $raw_data = $response['response']['message'];
-        } else {
-            $success = true;
-            $raw_data = $response['body'];
-        }
-    }
-    
-    return compact('raw_data', 'success');
+function opinionstage_uninstall() {
+    delete_option(OPINIONSTAGE_OPTIONS_KEY);
 }
 
 /**
@@ -123,8 +54,9 @@ function opinionstage_poll_footer_admin() {
  */
 function opinionstage_poll_menu() {
 	if (function_exists('add_menu_page')) {
-		add_menu_page(__('Add Polls', OPINIONSTAGE_WIDGET_UNIQUE_ID), __('Polls', OPINIONSTAGE_WIDGET_UNIQUE_ID), 'edit_posts', OPINIONSTAGE_WIDGET_UNIQUE_LOCATION, 'opinionstage_add_poll_page', 
+		add_menu_page(__(OPINIONSTAGE_WIDGET_MENU_NAME, OPINIONSTAGE_WIDGET_UNIQUE_ID), __(OPINIONSTAGE_WIDGET_MENU_NAME, OPINIONSTAGE_WIDGET_MENU_NAME), 'edit_posts', OPINIONSTAGE_WIDGET_UNIQUE_LOCATION, 'opinionstage_add_poll_page', 
 			plugins_url(OPINIONSTAGE_WIDGET_UNIQUE_ID.'/images/os.png'), '25.234323221');
+		add_submenu_page(null, __('', OPINIONSTAGE_WIDGET_MENU_NAME), __('', OPINIONSTAGE_WIDGET_MENU_NAME), 'edit_posts', OPINIONSTAGE_WIDGET_UNIQUE_ID.'/opinionstage-callback.php');
 	}
 }
 
@@ -133,22 +65,147 @@ function opinionstage_poll_menu() {
  */
 function opinionstage_add_poll_page() {
   opinionstage_add_stylesheet();
+  $os_options = (array) get_option(OPINIONSTAGE_OPTIONS_KEY);
+  if (empty($os_options["uid"])) {
+	$first_time = true;	
+  } else {
+	$first_time = false;
+  }
   ?>
+    	<script type='text/javascript'>
+			jQuery(function ($) {
+                var callbackURL = function() {
+					return "<?php echo $url = get_admin_url('', '', 'admin') . 'admin.php?page='.OPINIONSTAGE_WIDGET_UNIQUE_ID.'/opinionstage-callback.php' ?>";
+				};
+				var handleWatermark = function(input){
+					if(input.val().trim() != "") {
+						input.removeClass('os-watermark');						
+					} else {
+						input.val(input.data('watermark'));
+						input.addClass('os-watermark');
+					}
+				};	
+				var toggleSettingsAjax = function(currObject, action) {	
+					$.post(ajaxurl, {action: action, activate: currObject.is(':checked')}, function(response) { });
+				};
+
+		        $('#start-login').click(function(){
+					var emailInput = $('#os-email');
+					var email = $(emailInput).val();
+					if (email == emailInput.data('watermark')) {
+						email = "";
+					}
+					var new_location = "http://" + "<?php echo OPINIONSTAGE_LOGIN_PATH.'?callback=' ?>" + encodeURIComponent(callbackURL()) + "&email=" + email; 
+					window.location = new_location;
+				});
+				
+				$('#switch-email').click(function(){
+					var new_location = "http://" + "<?php echo OPINIONSTAGE_LOGIN_PATH.'?callback=' ?>" + encodeURIComponent(callbackURL()); 
+					window.location = new_location;
+				});
+				
+				$('#os-email').keypress(function(e){
+					if (e.keyCode == 13) {
+						$('#start-login').click();
+					}
+				});
+									     				    				 
+				$('input.watermark').focus(function(){
+					var input = $(this);
+					if (input.data('watermark') == input.val()) {
+						input.val("");
+						input.removeClass('os-watermark');
+					}
+				}).each(function(){
+					handleWatermark($(this));
+				}).blur(function(){
+					handleWatermark($(this));
+				});	
+
+				$('#fly-out-switch').change(function(){
+					toggleSettingsAjax($(this), "opinionstage_ajax_toggle_flyout");
+				});
+
+				$('#article-placement-switch').change(function(){
+					toggleSettingsAjax($(this), "opinionstage_ajax_toggle_article_placement");
+				});				
+			});
+			
+		</script>  
   <div class="opinionstage-wrap">
 	  <div id="opinionstage-head"></div>
+	  <div class="section">	    
+	    <?php if($first_time) {?>	    	
+			<h2>Connect to Opinion Stage</h3>
+			<p>Connect WordPress with Opinion Stage to enable all features</p>
+	    	<input id="os-email" type="text" value="" class="watermark" data-watermark="Enter Your Email"/>
+	    	<a href="javascript:void(0)" class="os-button" id="start-login">Connect</a>	    	    			
+	    <?php } else { ?>
+			<p>You are connected to Opinion Stage with the following email</p>
+	    	<label class="checked" for="user-email"></label>
+	    	<input id="os-email" type="text" disabled="disabled" value="<?php echo($os_options["email"]) ?>"/>
+	    	<a href="javascript:void(0)" class="os-button" id="switch-email" >Switch Account</a>
+	    <?php } ?>
+	  </div>
+
 	  <div class="section">
-		  <h2>Actions</h2>
+		  <h2>Content</h2>
 		  <ul class="os_links_list">
-			<li><?php echo opinionstage_create_link('Create a Poll', 'new_poll', ''); ?></li>
-			<li><?php echo opinionstage_create_link('View Polls', 'dashboard', ''); ?></li>
-			<li><?php echo opinionstage_create_link('Create a Set', 'sets/new', ''); ?></li>
-			<li><?php echo opinionstage_create_link('View Sets', 'dashboard', 'tab=sets'); ?></li>						
-			<li><?php echo opinionstage_create_link('View Placements', 'dashboard', 'tab=containers'); ?></li>						
-			<li><a href="<?php _e(admin_url('admin.php?page=addpollstoallposts')) ?>">Add Polls to all articles</a></li>
+			<li><?php echo opinionstage_create_poll_link(); ?></li>
+			<li><?php echo opinionstage_dashboard_link('Manage Polls', 'polls'); ?></li>
+			<li><?php echo opinionstage_create_set_link(); ?></li>
+			<li><?php echo opinionstage_dashboard_link('Manage Sets', 'sets'); ?></li>						
 		  </ul>
+	  </div>
+	  <div class="section">
+		  <h2>Placements</h2>
+			<div class="placement_wrapper">
+				<div class='description'>
+					<div class="text">
+						Fly-out
+					</div>
+					<a href="http://blog.opinionstage.com/fly-out-placements/?o=wp35e8" class="question-link" target="_blank">(?)</a>
+				</div>
+				<div class="onoffswitch left <?php echo($first_time ? "disabled" : "")?>">
+					<input type="checkbox" name="fly-out-switch" class="onoffswitch-checkbox" <?php echo($first_time ? "disabled" : "")?> id="fly-out-switch" <?php echo($os_options['fly_out_active'] == 'true' ? "checked" : "") ?>>
+					  <label class="onoffswitch-label" for="fly-out-switch">
+						<div class="onoffswitch-inner"></div>
+						<div class="onoffswitch-switch"></div>
+					</label>
+				</div>							
+				<?php if(!$first_time) {?>	    					
+					<a href="<?php echo opinionstage_flyout_edit_url(); ?>" target="_blank">Configure</a>
+			    <?php } ?>
+			</div>
+			<div class="placement_wrapper">
+				<div class='description'>
+					<div class="text">
+						Article Section
+					</div>					
+					<a href="http://blog.opinionstage.com/poll-placements/?o=wp35e8" class="question-link" target="_blank">(?)</a>
+				</div>	
+				<div class="onoffswitch left <?php echo($first_time ? "disabled" : "")?>">
+					<input type="checkbox" name="article-placement-switch" class="onoffswitch-checkbox" <?php echo($first_time ? "disabled" : "")?> id="article-placement-switch" <?php echo($os_options['article_placement_active'] == 'true' ? "checked" : "") ?>>
+					  <label class="onoffswitch-label" for="article-placement-switch">
+						<div class="onoffswitch-inner"></div>
+						<div class="onoffswitch-switch"></div>
+					</label>
+				</div>							
+				<?php if(!$first_time) {?>	    					
+					<a href="<?php echo opinionstage_article_placement_edit_url(); ?>" target="_blank">Configure</a>
+			    <?php } ?>
+			</div>			
+	  </div>
+	  <div class="section">			
+		  <h2>Monetization</h2>
+		  <ul class="os_links_list">
+			<li><?php echo opinionstage_logged_in_link('Contact us to monetize your traffic', "http://".OPINIONSTAGE_SERVER_BASE."/advanced-solutions"); ?></li>		 
+		  </ul>	  
+	  </div>  
+	  <div class="section">			
 		  <h2>Help</h2>
 		  <ul class="os_links_list">			
-			<li><a href="http://blog.opinionstage.com/wordpress-poll-how-to-add-polls-to-wordpress-sites/?o=wp35e8" target="_blank">Help</a></li>					  
+			<li><a href="http://blog.opinionstage.com/wordpress-poll-how-to-add-polls-to-wordpress-sites/?o=wp35e8" target="_blank">How to use this plugin</a></li>					  
 			<li><?php echo opinionstage_create_link('View Examples', 'showcase', ''); ?></li>
 			<li><a href="https://opinionstage.zendesk.com/anonymous_requests/new" target="_blank">Contact Us</a></li>					  
 		  </ul>	  
@@ -214,10 +271,10 @@ function opinionstage_add_poll_popup() {
 			  <input type="button" class="opinionstage-submit button-primary" value="Insert Poll" name="submit" />
 			</p>
 			<p><strong>Haven't created a poll yet?</strong></br></br>
-				<?php echo opinionstage_create_link('Create a new poll', 'new_poll', ''); ?>
+				<?php echo opinionstage_create_poll_link(); ?>
 			</p>
 			<p><strong>Don't know the poll ID?</strong></br></br>
-				<?php echo opinionstage_create_link('Locate ID of an existing poll', 'dashboard', ''); ?>
+				<?php echo opinionstage_dashboard_link('Locate ID of an existing poll', 'polls'); ?>				
 			</p>
 		</div>
 		<div class="setWrp" style="display: none;">
@@ -227,10 +284,10 @@ function opinionstage_add_poll_popup() {
 			  <input type="button" class="opinionstage-submit button-primary" value="Insert Set" name="submit" />
 			</p>
 			<p><strong>Haven't created a set yet?</strong></br></br>
-				<?php echo opinionstage_create_link('Create a new set', 'sets/new', ''); ?>
+				<?php echo opinionstage_create_set_link(); ?>
 			</p>
 			<p><strong>Don't know the set ID?</strong></br></br>
-				<?php echo opinionstage_create_link('Locate ID of an existing set', 'dashboard', 'tab=sets', array()); ?>
+				<?php echo opinionstage_dashboard_link('Locate ID of an existing set', 'sets'); ?>				
 			</p>
 		</div>
 	  </div>
@@ -239,48 +296,33 @@ function opinionstage_add_poll_popup() {
 }
 
 /**
- * Utility function to create a link with the correct host and all the required information.
+ * Add the flyout embed code to the page header
  */
-function opinionstage_create_link($caption, $page, $params = "", $options = array()) {
-	$style = empty($options['style']) ? '' : $options['style'];
-	$new_page = empty($options['new_page']) ? true : $options['new_page'];
-	$params_prefix = empty($params) ? "" : "&";	
-	$link = "http://".OPINIONSTAGE_SERVER_BASE."/".$page."?" . "o=".OPINIONSTAGE_WIDGET_API_KEY.$params_prefix.$params;
-	return "<a href=\"".$link."\"".($new_page ? " target='_blank'" : "")." style=".$style.">".$caption."</a>";
-}
-
-/**
- * CSS file loading
- */
-function opinionstage_add_stylesheet() {
-	// Respects SSL, Style.css is relative to the current file
-	wp_register_style( 'opinionstage-style', plugins_url('style.css', __FILE__) );
-	wp_enqueue_style( 'opinionstage-style' );
-}
-
-/**
- * Adds the poll button to the edit bar for new/edited post/page In TinyMCE >= WordPress 2.5
- */
-function opinionstage_poll_tinymce_addbuttons() {
-	if(!current_user_can('edit_posts') && ! current_user_can('edit_pages')) {
-		return;
-	}
-	if(get_user_option('rich_editing') == 'true') {
-		add_filter("mce_external_plugins", "opinionstage_poll_tinymce_addplugin");
-		add_filter('mce_buttons', 'opinionstage_poll_tinymce_registerbutton');
+function opinionstage_add_flyout() {
+	$os_options = (array) get_option(OPINIONSTAGE_OPTIONS_KEY);
+	
+	if (!empty($os_options['fly_id']) && $os_options['fly_out_active'] == 'true' && !is_admin() ) {
+		// Will be added to the head of the page
+		?>
+		 <script type="text/javascript">//<![CDATA[
+			window.AutoEngageSettings = {
+			  id : '<?php echo $os_options['fly_id']; ?>'
+			};
+			(function(d, s, id){
+			var js,
+				fjs = d.getElementsByTagName(s)[0],
+				p = (('https:' == d.location.protocol) ? 'https://' : 'http://'),
+				r = Math.floor(new Date().getTime() / 1000000);
+			if (d.getElementById(id)) {return;}
+			js = d.createElement(s); js.id = id; js.async=1;
+			js.src = p + '<?php echo OPINIONSTAGE_SERVER_BASE; ?>' + '/assets/autoengage.js?' + r;
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'os-jssdk'));
+			
+		//]]></script>
+		
+		<?php
 	}
 }
-function opinionstage_poll_tinymce_registerbutton($buttons) {
-	array_push($buttons, 'separator', 'ospolls');
-	return $buttons;
-}
-function opinionstage_poll_tinymce_addplugin($plugin_array) {
-	$plugin_array['ospolls'] = plugins_url(OPINIONSTAGE_WIDGET_UNIQUE_ID.'/tinymce/plugins/polls/editor_plugin.js');
-	return $plugin_array;
-}
 
-/**
- * Add polls to all posts admin page
- */
-require_once('opinionstage_add_polls_to_all_posts.php');
 ?>

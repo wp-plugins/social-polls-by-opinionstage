@@ -123,6 +123,10 @@ We support both regular multiple-sided polls and a special head-to-head poll fla
 N/A
 
 == Changelog ==
+  = Version 12.2.0 =
+  * Added the option to connect the plugin to Opinion Stage account
+  * Added plug & play integration for fly-out placement  
+  * Replaced the option of adding polls to all posts with plug & play article section placement
   = Version 12.1.0 =
   * Additional fix for supporting SSL
   = Version 12.0.0 =
